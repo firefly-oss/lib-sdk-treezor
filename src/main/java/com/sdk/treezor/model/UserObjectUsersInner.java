@@ -476,7 +476,7 @@ public class UserObjectUsersInner {
 
   public static final String JSON_PROPERTY_DISTRIBUTION_COUNTRY = "distributionCountry";
   @javax.annotation.Nullable
-  private JsonNullable<DistributionCountryEnum> distributionCountry = JsonNullable.<DistributionCountryEnum>undefined();
+  private JsonNullable<DistributionCountryEnum> distributionCountry = null;
 
   public static final String JSON_PROPERTY_SECONDARY_ADDRESS1 = "secondaryAddress1";
   @javax.annotation.Nullable
@@ -1372,7 +1372,7 @@ public class UserObjectUsersInner {
 
   public static final String JSON_PROPERTY_OCCUPATION_CATEGORY = "occupationCategory";
   @javax.annotation.Nullable
-  private JsonNullable<OccupationCategoryEnum> occupationCategory = JsonNullable.<OccupationCategoryEnum>undefined();
+  private JsonNullable<OccupationCategoryEnum> occupationCategory = null;
 
   /**
    * The personal assets range of the user. See [Personal Assets Range](/guide/users/physical.html#personal-assets-range-personalassetsrange) for the list of values. 
@@ -1423,7 +1423,7 @@ public class UserObjectUsersInner {
 
   public static final String JSON_PROPERTY_PERSONAL_ASSETS_RANGE = "personalAssetsRange";
   @javax.annotation.Nullable
-  private JsonNullable<PersonalAssetsRangeEnum> personalAssetsRange = JsonNullable.<PersonalAssetsRangeEnum>undefined();
+  private JsonNullable<PersonalAssetsRangeEnum> personalAssetsRange = null;
 
   /**
    * Net monthly income of the user. See [Monthly Income Range](/guide/users/physical.html#monthly-income-range-monthlyincomerange) for the list of values. 
@@ -1472,7 +1472,7 @@ public class UserObjectUsersInner {
 
   public static final String JSON_PROPERTY_MONTHLY_INCOME_RANGE = "monthlyIncomeRange";
   @javax.annotation.Nullable
-  private JsonNullable<MonthlyIncomeRangeEnum> monthlyIncomeRange = JsonNullable.<MonthlyIncomeRangeEnum>undefined();
+  private JsonNullable<MonthlyIncomeRangeEnum> monthlyIncomeRange = null;
 
   public static final String JSON_PROPERTY_BIRTH_CITY_CODE = "birthCityCode";
   @javax.annotation.Nullable
