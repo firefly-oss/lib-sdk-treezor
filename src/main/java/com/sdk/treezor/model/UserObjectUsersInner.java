@@ -476,7 +476,7 @@ public class UserObjectUsersInner {
 
   public static final String JSON_PROPERTY_DISTRIBUTION_COUNTRY = "distributionCountry";
   @javax.annotation.Nullable
-  private JsonNullable<DistributionCountryEnum> distributionCountry = JsonNullable.<DistributionCountryEnum>undefined();
+  private DistributionCountryEnum distributionCountry;
 
   public static final String JSON_PROPERTY_SECONDARY_ADDRESS1 = "secondaryAddress1";
   @javax.annotation.Nullable
@@ -1372,7 +1372,7 @@ public class UserObjectUsersInner {
 
   public static final String JSON_PROPERTY_OCCUPATION_CATEGORY = "occupationCategory";
   @javax.annotation.Nullable
-  private JsonNullable<OccupationCategoryEnum> occupationCategory = JsonNullable.<OccupationCategoryEnum>undefined();
+  private OccupationCategoryEnum occupationCategory;
 
   /**
    * The personal assets range of the user. See [Personal Assets Range](/guide/users/physical.html#personal-assets-range-personalassetsrange) for the list of values. 
@@ -1423,7 +1423,7 @@ public class UserObjectUsersInner {
 
   public static final String JSON_PROPERTY_PERSONAL_ASSETS_RANGE = "personalAssetsRange";
   @javax.annotation.Nullable
-  private JsonNullable<PersonalAssetsRangeEnum> personalAssetsRange = JsonNullable.<PersonalAssetsRangeEnum>undefined();
+  private PersonalAssetsRangeEnum personalAssetsRange;
 
   /**
    * Net monthly income of the user. See [Monthly Income Range](/guide/users/physical.html#monthly-income-range-monthlyincomerange) for the list of values. 
@@ -1472,7 +1472,7 @@ public class UserObjectUsersInner {
 
   public static final String JSON_PROPERTY_MONTHLY_INCOME_RANGE = "monthlyIncomeRange";
   @javax.annotation.Nullable
-  private JsonNullable<MonthlyIncomeRangeEnum> monthlyIncomeRange = JsonNullable.<MonthlyIncomeRangeEnum>undefined();
+  private MonthlyIncomeRangeEnum monthlyIncomeRange;
 
   public static final String JSON_PROPERTY_BIRTH_CITY_CODE = "birthCityCode";
   @javax.annotation.Nullable
@@ -2042,7 +2042,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner distributionCountry(@javax.annotation.Nullable DistributionCountryEnum distributionCountry) {
-    this.distributionCountry = JsonNullable.<DistributionCountryEnum>of(distributionCountry);
+    this.distributionCountry = distributionCountry;
     
     return this;
   }
@@ -2055,23 +2055,11 @@ public class UserObjectUsersInner {
   @JsonIgnore
 
   public DistributionCountryEnum getDistributionCountry() {
-        return distributionCountry.orElse(null);
-  }
-
-  @JsonProperty(JSON_PROPERTY_DISTRIBUTION_COUNTRY)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public JsonNullable<DistributionCountryEnum> getDistributionCountry_JsonNullable() {
-    return distributionCountry;
-  }
-  
-  @JsonProperty(JSON_PROPERTY_DISTRIBUTION_COUNTRY)
-  public void setDistributionCountry_JsonNullable(JsonNullable<DistributionCountryEnum> distributionCountry) {
-    this.distributionCountry = distributionCountry;
+        return distributionCountry;
   }
 
   public void setDistributionCountry(@javax.annotation.Nullable DistributionCountryEnum distributionCountry) {
-    this.distributionCountry = JsonNullable.<DistributionCountryEnum>of(distributionCountry);
+    this.distributionCountry = distributionCountry;
   }
 
   public UserObjectUsersInner secondaryAddress1(@javax.annotation.Nullable String secondaryAddress1) {
@@ -3526,7 +3514,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner occupationCategory(@javax.annotation.Nullable OccupationCategoryEnum occupationCategory) {
-    this.occupationCategory = JsonNullable.<OccupationCategoryEnum>of(occupationCategory);
+    this.occupationCategory = occupationCategory;
     
     return this;
   }
@@ -3537,29 +3525,16 @@ public class UserObjectUsersInner {
    */
   @javax.annotation.Nullable
   @JsonIgnore
-
   public OccupationCategoryEnum getOccupationCategory() {
-        return occupationCategory.orElse(null);
-  }
-
-  @JsonProperty(JSON_PROPERTY_OCCUPATION_CATEGORY)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public JsonNullable<OccupationCategoryEnum> getOccupationCategory_JsonNullable() {
-    return occupationCategory;
-  }
-  
-  @JsonProperty(JSON_PROPERTY_OCCUPATION_CATEGORY)
-  public void setOccupationCategory_JsonNullable(JsonNullable<OccupationCategoryEnum> occupationCategory) {
-    this.occupationCategory = occupationCategory;
+        return occupationCategory;
   }
 
   public void setOccupationCategory(@javax.annotation.Nullable OccupationCategoryEnum occupationCategory) {
-    this.occupationCategory = JsonNullable.<OccupationCategoryEnum>of(occupationCategory);
+    this.occupationCategory = occupationCategory;
   }
 
   public UserObjectUsersInner personalAssetsRange(@javax.annotation.Nullable PersonalAssetsRangeEnum personalAssetsRange) {
-    this.personalAssetsRange = JsonNullable.<PersonalAssetsRangeEnum>of(personalAssetsRange);
+    this.personalAssetsRange = personalAssetsRange;
     
     return this;
   }
@@ -3572,27 +3547,15 @@ public class UserObjectUsersInner {
   @JsonIgnore
 
   public PersonalAssetsRangeEnum getPersonalAssetsRange() {
-        return personalAssetsRange.orElse(null);
-  }
-
-  @JsonProperty(JSON_PROPERTY_PERSONAL_ASSETS_RANGE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public JsonNullable<PersonalAssetsRangeEnum> getPersonalAssetsRange_JsonNullable() {
-    return personalAssetsRange;
-  }
-  
-  @JsonProperty(JSON_PROPERTY_PERSONAL_ASSETS_RANGE)
-  public void setPersonalAssetsRange_JsonNullable(JsonNullable<PersonalAssetsRangeEnum> personalAssetsRange) {
-    this.personalAssetsRange = personalAssetsRange;
+        return personalAssetsRange;
   }
 
   public void setPersonalAssetsRange(@javax.annotation.Nullable PersonalAssetsRangeEnum personalAssetsRange) {
-    this.personalAssetsRange = JsonNullable.<PersonalAssetsRangeEnum>of(personalAssetsRange);
+    this.personalAssetsRange = personalAssetsRange;
   }
 
   public UserObjectUsersInner monthlyIncomeRange(@javax.annotation.Nullable MonthlyIncomeRangeEnum monthlyIncomeRange) {
-    this.monthlyIncomeRange = JsonNullable.<MonthlyIncomeRangeEnum>of(monthlyIncomeRange);
+    this.monthlyIncomeRange = monthlyIncomeRange;
     
     return this;
   }
@@ -3603,25 +3566,13 @@ public class UserObjectUsersInner {
    */
   @javax.annotation.Nullable
   @JsonIgnore
-
   public MonthlyIncomeRangeEnum getMonthlyIncomeRange() {
-        return monthlyIncomeRange.orElse(null);
+        return monthlyIncomeRange;
   }
 
-  @JsonProperty(JSON_PROPERTY_MONTHLY_INCOME_RANGE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public JsonNullable<MonthlyIncomeRangeEnum> getMonthlyIncomeRange_JsonNullable() {
-    return monthlyIncomeRange;
-  }
-  
-  @JsonProperty(JSON_PROPERTY_MONTHLY_INCOME_RANGE)
-  public void setMonthlyIncomeRange_JsonNullable(JsonNullable<MonthlyIncomeRangeEnum> monthlyIncomeRange) {
-    this.monthlyIncomeRange = monthlyIncomeRange;
-  }
 
   public void setMonthlyIncomeRange(@javax.annotation.Nullable MonthlyIncomeRangeEnum monthlyIncomeRange) {
-    this.monthlyIncomeRange = JsonNullable.<MonthlyIncomeRangeEnum>of(monthlyIncomeRange);
+    this.monthlyIncomeRange = monthlyIncomeRange;
   }
 
   public UserObjectUsersInner birthCityCode(@javax.annotation.Nullable String birthCityCode) {
@@ -3689,7 +3640,7 @@ public class UserObjectUsersInner {
         Objects.equals(this.state, userObjectUsersInner.state) &&
         Objects.equals(this.country, userObjectUsersInner.country) &&
         Objects.equals(this.countryName, userObjectUsersInner.countryName) &&
-        equalsNullable(this.distributionCountry, userObjectUsersInner.distributionCountry) &&
+        Objects.equals(this.distributionCountry, userObjectUsersInner.distributionCountry) &&
         Objects.equals(this.secondaryAddress1, userObjectUsersInner.secondaryAddress1) &&
         Objects.equals(this.secondaryAddress2, userObjectUsersInner.secondaryAddress2) &&
         Objects.equals(this.secondaryAddress3, userObjectUsersInner.secondaryAddress3) &&
@@ -3747,10 +3698,7 @@ public class UserObjectUsersInner {
         Objects.equals(this.modifiedDate, userObjectUsersInner.modifiedDate) &&
         Objects.equals(this.walletCount, userObjectUsersInner.walletCount) &&
         Objects.equals(this.payinCount, userObjectUsersInner.payinCount) &&
-        Objects.equals(this.totalRows, userObjectUsersInner.totalRows) &&
-        equalsNullable(this.occupationCategory, userObjectUsersInner.occupationCategory) &&
-        equalsNullable(this.personalAssetsRange, userObjectUsersInner.personalAssetsRange) &&
-        equalsNullable(this.monthlyIncomeRange, userObjectUsersInner.monthlyIncomeRange) &&
+        Objects.equals(this.totalRows, userObjectUsersInner.totalRows) && Objects.equals(this.occupationCategory, userObjectUsersInner.occupationCategory) && Objects.equals(this.personalAssetsRange, userObjectUsersInner.personalAssetsRange) && Objects.equals(this.monthlyIncomeRange, userObjectUsersInner.monthlyIncomeRange) &&
         equalsNullable(this.birthCityCode, userObjectUsersInner.birthCityCode);
   }
 
@@ -3760,7 +3708,7 @@ public class UserObjectUsersInner {
 
   @Override
   public int hashCode() {
-    return Objects.hash(userId, userStatus, userTag, parentUserId, parentType, controllingPersonType, employeeType, specifiedUSPerson, title, firstname, lastname, middleNames, birthday, email, address1, address2, address3, postcode, city, state, country, countryName, hashCodeNullable(distributionCountry), secondaryAddress1, secondaryAddress2, secondaryAddress3, secondaryPostcode, secondaryCity, secondaryState, secondaryCountry, clientId, phone, mobile, nationality, nationalityOther, placeOfBirth, birthCountry, occupation, incomeRange, legalName, legalNameEmbossed, legalRegistrationNumber, legalTvaNumber, legalRegistrationDate, legalForm, legalShareCapital, legalSector, legalAnnualTurnOver, legalNetIncomeRange, legalNumberOfEmployeeRange, effectiveBeneficiary, kycLevel, kycReview, kycReviewComment, isFreezed, isFrozen, language, optInMailing, sepaCreditorIdentifier, taxNumber, taxResidence, position, personalAssets, activityOutsideEu, economicSanctions, residentCountriesSanctions, involvedSanctions, entitySanctionsQuestionnaire, sanctionsQuestionnaireDate, timezone, occupationType, sourceOfFunds, legalSectorType, isOnStockExchange, codeStatus, informationStatus, createdDate, modifiedDate, walletCount, payinCount, totalRows, hashCodeNullable(occupationCategory), hashCodeNullable(personalAssetsRange), hashCodeNullable(monthlyIncomeRange), hashCodeNullable(birthCityCode));
+    return Objects.hash(userId, userStatus, userTag, parentUserId, parentType, controllingPersonType, employeeType, specifiedUSPerson, title, firstname, lastname, middleNames, birthday, email, address1, address2, address3, postcode, city, state, country, countryName, distributionCountry, secondaryAddress1, secondaryAddress2, secondaryAddress3, secondaryPostcode, secondaryCity, secondaryState, secondaryCountry, clientId, phone, mobile, nationality, nationalityOther, placeOfBirth, birthCountry, occupation, incomeRange, legalName, legalNameEmbossed, legalRegistrationNumber, legalTvaNumber, legalRegistrationDate, legalForm, legalShareCapital, legalSector, legalAnnualTurnOver, legalNetIncomeRange, legalNumberOfEmployeeRange, effectiveBeneficiary, kycLevel, kycReview, kycReviewComment, isFreezed, isFrozen, language, optInMailing, sepaCreditorIdentifier, taxNumber, taxResidence, position, personalAssets, activityOutsideEu, economicSanctions, residentCountriesSanctions, involvedSanctions, entitySanctionsQuestionnaire, sanctionsQuestionnaireDate, timezone, occupationType, sourceOfFunds, legalSectorType, isOnStockExchange, codeStatus, informationStatus, createdDate, modifiedDate, walletCount, payinCount, totalRows, occupationCategory, personalAssetsRange, monthlyIncomeRange, hashCodeNullable(birthCityCode));
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
