@@ -623,7 +623,7 @@ public class PostUsersRequest {
 
   public static final String JSON_PROPERTY_LEGAL_REGISTRATION_DATE = "legalRegistrationDate";
   @javax.annotation.Nullable
-  private LocalDate legalRegistrationDate;
+  private String legalRegistrationDate;
 
   public static final String JSON_PROPERTY_LEGAL_FORM = "legalForm";
   @javax.annotation.Nullable
@@ -2430,7 +2430,7 @@ public class PostUsersRequest {
     this.legalTvaNumber = legalTvaNumber;
   }
 
-  public PostUsersRequest legalRegistrationDate(@javax.annotation.Nullable LocalDate legalRegistrationDate) {
+  public PostUsersRequest legalRegistrationDate(@javax.annotation.Nullable String legalRegistrationDate) {
 
     this.legalRegistrationDate = legalRegistrationDate;
     return this;
@@ -2444,14 +2444,14 @@ public class PostUsersRequest {
   @JsonProperty(JSON_PROPERTY_LEGAL_REGISTRATION_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public LocalDate getLegalRegistrationDate() {
+  public String getLegalRegistrationDate() {
     return legalRegistrationDate;
   }
 
 
   @JsonProperty(JSON_PROPERTY_LEGAL_REGISTRATION_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLegalRegistrationDate(@javax.annotation.Nullable LocalDate legalRegistrationDate) {
+  public void setLegalRegistrationDate(@javax.annotation.Nullable String legalRegistrationDate) {
     this.legalRegistrationDate = legalRegistrationDate;
   }
 
