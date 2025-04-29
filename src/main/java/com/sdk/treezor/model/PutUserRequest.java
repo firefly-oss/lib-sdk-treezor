@@ -116,11 +116,11 @@ public class PutUserRequest {
    */
   public enum ControllingPersonTypeEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1)),
-    
+
     NUMBER_2(Integer.valueOf(2)),
-    
+
     NUMBER_3(Integer.valueOf(3));
 
     private Integer value;
@@ -159,9 +159,9 @@ public class PutUserRequest {
    */
   public enum EmployeeTypeEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1)),
-    
+
     NUMBER_2(Integer.valueOf(2));
 
     private Integer value;
@@ -252,15 +252,15 @@ public class PutUserRequest {
    */
   public enum DistributionCountryEnum {
     FR(String.valueOf("FR")),
-    
+
     ES(String.valueOf("ES")),
-    
+
     IT(String.valueOf("IT")),
-    
+
     DE(String.valueOf("DE")),
-    
+
     BE(String.valueOf("BE")),
-    
+
     NL(String.valueOf("NL"));
 
     private String value;
@@ -292,7 +292,7 @@ public class PutUserRequest {
 
   public static final String JSON_PROPERTY_DISTRIBUTION_COUNTRY = "distributionCountry";
   @javax.annotation.Nullable
-  private JsonNullable<DistributionCountryEnum> distributionCountry = JsonNullable.<DistributionCountryEnum>undefined();
+  private DistributionCountryEnum distributionCountry;
 
   public static final String JSON_PROPERTY_SECONDARY_ADDRESS1 = "secondaryAddress1";
   @javax.annotation.Nullable
@@ -355,15 +355,15 @@ public class PutUserRequest {
    */
   public enum IncomeRangeEnum {
     _0_18(String.valueOf("0-18")),
-    
+
     _19_23(String.valueOf("19-23")),
-    
+
     _24_27(String.valueOf("24-27")),
-    
+
     _28_35(String.valueOf("28-35")),
-    
+
     _36_56(String.valueOf("36-56")),
-    
+
     _57_(String.valueOf("57-*"));
 
     private String value;
@@ -430,19 +430,19 @@ public class PutUserRequest {
    */
   public enum LegalAnnualTurnOverEnum {
     _0_39(String.valueOf("0-39")),
-    
+
     _40_99(String.valueOf("40-99")),
-    
+
     _100_249(String.valueOf("100-249")),
-    
+
     _250_999(String.valueOf("250-999")),
-    
+
     _1000_2999(String.valueOf("1000-2999")),
-    
+
     _3000_9999(String.valueOf("3000-9999")),
-    
+
     _10000_99999(String.valueOf("10000-99999")),
-    
+
     _100000_(String.valueOf("100000-*"));
 
     private String value;
@@ -481,15 +481,15 @@ public class PutUserRequest {
    */
   public enum LegalNetIncomeRangeEnum {
     _0_4(String.valueOf("0-4")),
-    
+
     _5_9(String.valueOf("5-9")),
-    
+
     _10_49(String.valueOf("10-49")),
-    
+
     _50_149(String.valueOf("50-149")),
-    
+
     _150_499(String.valueOf("150-499")),
-    
+
     _500_(String.valueOf("500-*"));
 
     private String value;
@@ -528,13 +528,13 @@ public class PutUserRequest {
    */
   public enum LegalNumberOfEmployeeRangeEnum {
     _0(String.valueOf("0")),
-    
+
     _1_9(String.valueOf("1-9")),
-    
+
     _10_99(String.valueOf("10-99")),
-    
+
     _100_249(String.valueOf("100-249")),
-    
+
     _250_(String.valueOf("250-*"));
 
     private String value;
@@ -593,15 +593,15 @@ public class PutUserRequest {
    */
   public enum PersonalAssetsEnum {
     _0_2(String.valueOf("0-2")),
-    
+
     _3_22(String.valueOf("3-22")),
-    
+
     _23_128(String.valueOf("23-128")),
-    
+
     _129_319(String.valueOf("129-319")),
-    
+
     _320_464(String.valueOf("320-464")),
-    
+
     _465_(String.valueOf("465-"));
 
     private String value;
@@ -640,7 +640,7 @@ public class PutUserRequest {
    */
   public enum ActivityOutsideEuEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1));
 
     private Integer value;
@@ -679,7 +679,7 @@ public class PutUserRequest {
    */
   public enum EconomicSanctionsEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1));
 
     private Integer value;
@@ -718,7 +718,7 @@ public class PutUserRequest {
    */
   public enum ResidentCountriesSanctionsEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1));
 
     private Integer value;
@@ -757,7 +757,7 @@ public class PutUserRequest {
    */
   public enum InvolvedSanctionsEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1));
 
     private Integer value;
@@ -796,13 +796,13 @@ public class PutUserRequest {
    */
   public enum EntitySanctionsQuestionnaireEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1)),
-    
+
     NUMBER_2(Integer.valueOf(2)),
-    
+
     NUMBER_3(Integer.valueOf(3)),
-    
+
     NUMBER_4(Integer.valueOf(4));
 
     private Integer value;
@@ -845,13 +845,13 @@ public class PutUserRequest {
    */
   public enum OccupationTypeEnum {
     SELF_EMPLOYED(String.valueOf("self_employed")),
-    
+
     PUBLIC_SECTOR_EMPLOYEES(String.valueOf("public_sector_employees")),
-    
+
     PRIVATE_SECTOR_EMPLOYEES(String.valueOf("private_sector_employees")),
-    
+
     RETIRED_PEOPLE_AND_STUDENTS(String.valueOf("retired_people_and_students")),
-    
+
     WITHOUT_ANY_PROFESSIONAL_ACTIVITY(String.valueOf("without_any_professional_activity"));
 
     private String value;
@@ -890,21 +890,21 @@ public class PutUserRequest {
    */
   public enum SourceOfFundsEnum {
     DONATION(String.valueOf("donation")),
-    
+
     INHERITANCE(String.valueOf("inheritance")),
-    
+
     LOAN(String.valueOf("loan")),
-    
+
     LOTTERY(String.valueOf("lottery")),
-    
+
     PENSION(String.valueOf("pension")),
-    
+
     PROCEEDS_FROM_INVESTMENT(String.valueOf("proceeds_from_investment")),
-    
+
     PROCEEDS_FROM_SALE(String.valueOf("proceeds_from_sale")),
-    
+
     SALARY(String.valueOf("salary")),
-    
+
     SAVINGS(String.valueOf("savings"));
 
     private String value;
@@ -943,7 +943,7 @@ public class PutUserRequest {
    */
   public enum LegalSectorTypeEnum {
     NAF(String.valueOf("NAF")),
-    
+
     NACE(String.valueOf("NACE"));
 
     private String value;
@@ -982,7 +982,7 @@ public class PutUserRequest {
    */
   public enum IsOnStockExchangeEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1));
 
     private Integer value;
@@ -1021,33 +1021,33 @@ public class PutUserRequest {
    */
   public enum OccupationCategoryEnum {
     NUMBER_1(Integer.valueOf(1)),
-    
+
     NUMBER_2(Integer.valueOf(2)),
-    
+
     NUMBER_3(Integer.valueOf(3)),
-    
+
     NUMBER_4(Integer.valueOf(4)),
-    
+
     NUMBER_5(Integer.valueOf(5)),
-    
+
     NUMBER_6(Integer.valueOf(6)),
-    
+
     NUMBER_7(Integer.valueOf(7)),
-    
+
     NUMBER_8(Integer.valueOf(8)),
-    
+
     NUMBER_9(Integer.valueOf(9)),
-    
+
     NUMBER_10(Integer.valueOf(10)),
-    
+
     NUMBER_11(Integer.valueOf(11)),
-    
+
     NUMBER_12(Integer.valueOf(12)),
-    
+
     NUMBER_13(Integer.valueOf(13)),
-    
+
     NUMBER_14(Integer.valueOf(14)),
-    
+
     NUMBER_15(Integer.valueOf(15));
 
     private Integer value;
@@ -1079,26 +1079,26 @@ public class PutUserRequest {
 
   public static final String JSON_PROPERTY_OCCUPATION_CATEGORY = "occupationCategory";
   @javax.annotation.Nullable
-  private JsonNullable<OccupationCategoryEnum> occupationCategory = JsonNullable.<OccupationCategoryEnum>undefined();
+  private OccupationCategoryEnum occupationCategory;
 
   /**
    * The personal assets range of the user. See [Personal Assets Range](/guide/users/physical.html#personal-assets-range-personalassetsrange) for the list of values. 
    */
   public enum PersonalAssetsRangeEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1)),
-    
+
     NUMBER_2(Integer.valueOf(2)),
-    
+
     NUMBER_3(Integer.valueOf(3)),
-    
+
     NUMBER_4(Integer.valueOf(4)),
-    
+
     NUMBER_5(Integer.valueOf(5)),
-    
+
     NUMBER_6(Integer.valueOf(6)),
-    
+
     NUMBER_7(Integer.valueOf(7));
 
     private Integer value;
@@ -1130,24 +1130,24 @@ public class PutUserRequest {
 
   public static final String JSON_PROPERTY_PERSONAL_ASSETS_RANGE = "personalAssetsRange";
   @javax.annotation.Nullable
-  private JsonNullable<PersonalAssetsRangeEnum> personalAssetsRange = JsonNullable.<PersonalAssetsRangeEnum>undefined();
+  private PersonalAssetsRangeEnum personalAssetsRange;
 
   /**
    * Net monthly income of the user. See [Monthly Income Range](/guide/users/physical.html#monthly-income-range-monthlyincomerange) for the list of values. 
    */
   public enum MonthlyIncomeRangeEnum {
     NUMBER_1(Integer.valueOf(1)),
-    
+
     NUMBER_2(Integer.valueOf(2)),
-    
+
     NUMBER_3(Integer.valueOf(3)),
-    
+
     NUMBER_4(Integer.valueOf(4)),
-    
+
     NUMBER_5(Integer.valueOf(5)),
-    
+
     NUMBER_6(Integer.valueOf(6)),
-    
+
     NUMBER_7(Integer.valueOf(7));
 
     private Integer value;
@@ -1179,13 +1179,13 @@ public class PutUserRequest {
 
   public static final String JSON_PROPERTY_MONTHLY_INCOME_RANGE = "monthlyIncomeRange";
   @javax.annotation.Nullable
-  private JsonNullable<MonthlyIncomeRangeEnum> monthlyIncomeRange = JsonNullable.<MonthlyIncomeRangeEnum>undefined();
+  private MonthlyIncomeRangeEnum monthlyIncomeRange;
 
   public PutUserRequest() {
   }
 
   public PutUserRequest userTag(@javax.annotation.Nullable String userTag) {
-    
+
     this.userTag = userTag;
     return this;
   }
@@ -1210,7 +1210,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest accessTag(@javax.annotation.Nullable String accessTag) {
-    
+
     this.accessTag = accessTag;
     return this;
   }
@@ -1235,7 +1235,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest specifiedUSPerson(@javax.annotation.Nullable Integer specifiedUSPerson) {
-    
+
     this.specifiedUSPerson = specifiedUSPerson;
     return this;
   }
@@ -1260,7 +1260,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest controllingPersonType(@javax.annotation.Nullable ControllingPersonTypeEnum controllingPersonType) {
-    
+
     this.controllingPersonType = controllingPersonType;
     return this;
   }
@@ -1285,7 +1285,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest employeeType(@javax.annotation.Nullable EmployeeTypeEnum employeeType) {
-    
+
     this.employeeType = employeeType;
     return this;
   }
@@ -1310,7 +1310,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest title(@javax.annotation.Nullable String title) {
-    
+
     this.title = title;
     return this;
   }
@@ -1335,7 +1335,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest firstname(@javax.annotation.Nullable String firstname) {
-    
+
     this.firstname = firstname;
     return this;
   }
@@ -1360,7 +1360,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest lastname(@javax.annotation.Nullable String lastname) {
-    
+
     this.lastname = lastname;
     return this;
   }
@@ -1385,7 +1385,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest middleNames(@javax.annotation.Nullable String middleNames) {
-    
+
     this.middleNames = middleNames;
     return this;
   }
@@ -1410,7 +1410,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest birthday(@javax.annotation.Nullable String birthday) {
-    
+
     this.birthday = birthday;
     return this;
   }
@@ -1435,7 +1435,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest email(@javax.annotation.Nullable String email) {
-    
+
     this.email = email;
     return this;
   }
@@ -1460,7 +1460,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest address1(@javax.annotation.Nullable String address1) {
-    
+
     this.address1 = address1;
     return this;
   }
@@ -1485,7 +1485,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest address2(@javax.annotation.Nullable String address2) {
-    
+
     this.address2 = address2;
     return this;
   }
@@ -1510,7 +1510,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest address3(@javax.annotation.Nullable String address3) {
-    
+
     this.address3 = address3;
     return this;
   }
@@ -1535,7 +1535,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest postcode(@javax.annotation.Nullable String postcode) {
-    
+
     this.postcode = postcode;
     return this;
   }
@@ -1560,7 +1560,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest city(@javax.annotation.Nullable String city) {
-    
+
     this.city = city;
     return this;
   }
@@ -1585,7 +1585,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest state(@javax.annotation.Nullable String state) {
-    
+
     this.state = state;
     return this;
   }
@@ -1610,7 +1610,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest country(@javax.annotation.Nullable String country) {
-    
+
     this.country = country;
     return this;
   }
@@ -1635,8 +1635,8 @@ public class PutUserRequest {
   }
 
   public PutUserRequest distributionCountry(@javax.annotation.Nullable DistributionCountryEnum distributionCountry) {
-    this.distributionCountry = JsonNullable.<DistributionCountryEnum>of(distributionCountry);
-    
+    this.distributionCountry = distributionCountry;
+
     return this;
   }
 
@@ -1645,30 +1645,21 @@ public class PutUserRequest {
    * @return distributionCountry
    */
   @javax.annotation.Nullable
-  @JsonIgnore
+  @JsonProperty(JSON_PROPERTY_DISTRIBUTION_COUNTRY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public DistributionCountryEnum getDistributionCountry() {
-        return distributionCountry.orElse(null);
+    return distributionCountry;
   }
 
   @JsonProperty(JSON_PROPERTY_DISTRIBUTION_COUNTRY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public JsonNullable<DistributionCountryEnum> getDistributionCountry_JsonNullable() {
-    return distributionCountry;
-  }
-  
-  @JsonProperty(JSON_PROPERTY_DISTRIBUTION_COUNTRY)
-  public void setDistributionCountry_JsonNullable(JsonNullable<DistributionCountryEnum> distributionCountry) {
+  public void setDistributionCountry(@javax.annotation.Nullable DistributionCountryEnum distributionCountry) {
     this.distributionCountry = distributionCountry;
   }
 
-  public void setDistributionCountry(@javax.annotation.Nullable DistributionCountryEnum distributionCountry) {
-    this.distributionCountry = JsonNullable.<DistributionCountryEnum>of(distributionCountry);
-  }
-
   public PutUserRequest secondaryAddress1(@javax.annotation.Nullable String secondaryAddress1) {
-    
+
     this.secondaryAddress1 = secondaryAddress1;
     return this;
   }
@@ -1693,7 +1684,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest secondaryAddress2(@javax.annotation.Nullable String secondaryAddress2) {
-    
+
     this.secondaryAddress2 = secondaryAddress2;
     return this;
   }
@@ -1718,7 +1709,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest secondaryAddress3(@javax.annotation.Nullable String secondaryAddress3) {
-    
+
     this.secondaryAddress3 = secondaryAddress3;
     return this;
   }
@@ -1743,7 +1734,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest secondaryPostcode(@javax.annotation.Nullable String secondaryPostcode) {
-    
+
     this.secondaryPostcode = secondaryPostcode;
     return this;
   }
@@ -1768,7 +1759,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest secondaryCity(@javax.annotation.Nullable String secondaryCity) {
-    
+
     this.secondaryCity = secondaryCity;
     return this;
   }
@@ -1793,7 +1784,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest secondaryState(@javax.annotation.Nullable String secondaryState) {
-    
+
     this.secondaryState = secondaryState;
     return this;
   }
@@ -1818,7 +1809,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest secondaryCountry(@javax.annotation.Nullable String secondaryCountry) {
-    
+
     this.secondaryCountry = secondaryCountry;
     return this;
   }
@@ -1843,7 +1834,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest phone(@javax.annotation.Nullable String phone) {
-    
+
     this.phone = phone;
     return this;
   }
@@ -1868,7 +1859,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest mobile(@javax.annotation.Nullable String mobile) {
-    
+
     this.mobile = mobile;
     return this;
   }
@@ -1893,7 +1884,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest nationality(@javax.annotation.Nullable String nationality) {
-    
+
     this.nationality = nationality;
     return this;
   }
@@ -1918,7 +1909,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest nationalityOther(@javax.annotation.Nullable String nationalityOther) {
-    
+
     this.nationalityOther = nationalityOther;
     return this;
   }
@@ -1943,7 +1934,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest placeOfBirth(@javax.annotation.Nullable String placeOfBirth) {
-    
+
     this.placeOfBirth = placeOfBirth;
     return this;
   }
@@ -1968,7 +1959,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest birthCountry(@javax.annotation.Nullable String birthCountry) {
-    
+
     this.birthCountry = birthCountry;
     return this;
   }
@@ -1993,7 +1984,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest occupation(@javax.annotation.Nullable String occupation) {
-    
+
     this.occupation = occupation;
     return this;
   }
@@ -2018,7 +2009,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest incomeRange(@javax.annotation.Nullable IncomeRangeEnum incomeRange) {
-    
+
     this.incomeRange = incomeRange;
     return this;
   }
@@ -2043,7 +2034,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest legalName(@javax.annotation.Nullable String legalName) {
-    
+
     this.legalName = legalName;
     return this;
   }
@@ -2068,7 +2059,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest legalRegistrationNumber(@javax.annotation.Nullable String legalRegistrationNumber) {
-    
+
     this.legalRegistrationNumber = legalRegistrationNumber;
     return this;
   }
@@ -2093,7 +2084,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest legalTvaNumber(@javax.annotation.Nullable String legalTvaNumber) {
-    
+
     this.legalTvaNumber = legalTvaNumber;
     return this;
   }
@@ -2118,7 +2109,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest legalRegistrationDate(@javax.annotation.Nullable LocalDate legalRegistrationDate) {
-    
+
     this.legalRegistrationDate = legalRegistrationDate;
     return this;
   }
@@ -2143,7 +2134,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest legalForm(@javax.annotation.Nullable String legalForm) {
-    
+
     this.legalForm = legalForm;
     return this;
   }
@@ -2168,7 +2159,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest legalShareCapital(@javax.annotation.Nullable Integer legalShareCapital) {
-    
+
     this.legalShareCapital = legalShareCapital;
     return this;
   }
@@ -2193,7 +2184,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest legalSector(@javax.annotation.Nullable String legalSector) {
-    
+
     this.legalSector = legalSector;
     return this;
   }
@@ -2218,7 +2209,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest legalAnnualTurnOver(@javax.annotation.Nullable LegalAnnualTurnOverEnum legalAnnualTurnOver) {
-    
+
     this.legalAnnualTurnOver = legalAnnualTurnOver;
     return this;
   }
@@ -2243,7 +2234,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest legalNetIncomeRange(@javax.annotation.Nullable LegalNetIncomeRangeEnum legalNetIncomeRange) {
-    
+
     this.legalNetIncomeRange = legalNetIncomeRange;
     return this;
   }
@@ -2268,7 +2259,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest legalNumberOfEmployeeRange(@javax.annotation.Nullable LegalNumberOfEmployeeRangeEnum legalNumberOfEmployeeRange) {
-    
+
     this.legalNumberOfEmployeeRange = legalNumberOfEmployeeRange;
     return this;
   }
@@ -2293,7 +2284,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest effectiveBeneficiary(@javax.annotation.Nullable Integer effectiveBeneficiary) {
-    
+
     this.effectiveBeneficiary = effectiveBeneficiary;
     return this;
   }
@@ -2318,7 +2309,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest language(@javax.annotation.Nullable String language) {
-    
+
     this.language = language;
     return this;
   }
@@ -2343,7 +2334,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest taxNumber(@javax.annotation.Nullable String taxNumber) {
-    
+
     this.taxNumber = taxNumber;
     return this;
   }
@@ -2370,7 +2361,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest taxResidence(@javax.annotation.Nullable String taxResidence) {
-    
+
     this.taxResidence = taxResidence;
     return this;
   }
@@ -2397,7 +2388,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest position(@javax.annotation.Nullable String position) {
-    
+
     this.position = position;
     return this;
   }
@@ -2422,7 +2413,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest personalAssets(@javax.annotation.Nullable PersonalAssetsEnum personalAssets) {
-    
+
     this.personalAssets = personalAssets;
     return this;
   }
@@ -2449,7 +2440,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest activityOutsideEu(@javax.annotation.Nullable ActivityOutsideEuEnum activityOutsideEu) {
-    
+
     this.activityOutsideEu = activityOutsideEu;
     return this;
   }
@@ -2474,7 +2465,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest economicSanctions(@javax.annotation.Nullable EconomicSanctionsEnum economicSanctions) {
-    
+
     this.economicSanctions = economicSanctions;
     return this;
   }
@@ -2499,7 +2490,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest residentCountriesSanctions(@javax.annotation.Nullable ResidentCountriesSanctionsEnum residentCountriesSanctions) {
-    
+
     this.residentCountriesSanctions = residentCountriesSanctions;
     return this;
   }
@@ -2524,7 +2515,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest involvedSanctions(@javax.annotation.Nullable InvolvedSanctionsEnum involvedSanctions) {
-    
+
     this.involvedSanctions = involvedSanctions;
     return this;
   }
@@ -2549,7 +2540,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest entitySanctionsQuestionnaire(@javax.annotation.Nullable EntitySanctionsQuestionnaireEnum entitySanctionsQuestionnaire) {
-    
+
     this.entitySanctionsQuestionnaire = entitySanctionsQuestionnaire;
     return this;
   }
@@ -2574,7 +2565,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest timezone(@javax.annotation.Nullable String timezone) {
-    
+
     this.timezone = timezone;
     return this;
   }
@@ -2599,7 +2590,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest occupationType(@javax.annotation.Nullable OccupationTypeEnum occupationType) {
-    
+
     this.occupationType = occupationType;
     return this;
   }
@@ -2626,7 +2617,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest sourceOfFunds(@javax.annotation.Nullable SourceOfFundsEnum sourceOfFunds) {
-    
+
     this.sourceOfFunds = sourceOfFunds;
     return this;
   }
@@ -2651,7 +2642,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest legalSectorType(@javax.annotation.Nullable LegalSectorTypeEnum legalSectorType) {
-    
+
     this.legalSectorType = legalSectorType;
     return this;
   }
@@ -2676,7 +2667,7 @@ public class PutUserRequest {
   }
 
   public PutUserRequest isOnStockExchange(@javax.annotation.Nullable IsOnStockExchangeEnum isOnStockExchange) {
-    
+
     this.isOnStockExchange = isOnStockExchange;
     return this;
   }
@@ -2701,8 +2692,8 @@ public class PutUserRequest {
   }
 
   public PutUserRequest occupationCategory(@javax.annotation.Nullable OccupationCategoryEnum occupationCategory) {
-    this.occupationCategory = JsonNullable.<OccupationCategoryEnum>of(occupationCategory);
-    
+    this.occupationCategory = occupationCategory;
+
     return this;
   }
 
@@ -2711,31 +2702,22 @@ public class PutUserRequest {
    * @return occupationCategory
    */
   @javax.annotation.Nullable
-  @JsonIgnore
+  @JsonProperty(JSON_PROPERTY_OCCUPATION_CATEGORY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public OccupationCategoryEnum getOccupationCategory() {
-        return occupationCategory.orElse(null);
+    return occupationCategory;
   }
 
   @JsonProperty(JSON_PROPERTY_OCCUPATION_CATEGORY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public JsonNullable<OccupationCategoryEnum> getOccupationCategory_JsonNullable() {
-    return occupationCategory;
-  }
-  
-  @JsonProperty(JSON_PROPERTY_OCCUPATION_CATEGORY)
-  public void setOccupationCategory_JsonNullable(JsonNullable<OccupationCategoryEnum> occupationCategory) {
+  public void setOccupationCategory(@javax.annotation.Nullable OccupationCategoryEnum occupationCategory) {
     this.occupationCategory = occupationCategory;
   }
 
-  public void setOccupationCategory(@javax.annotation.Nullable OccupationCategoryEnum occupationCategory) {
-    this.occupationCategory = JsonNullable.<OccupationCategoryEnum>of(occupationCategory);
-  }
-
   public PutUserRequest personalAssetsRange(@javax.annotation.Nullable PersonalAssetsRangeEnum personalAssetsRange) {
-    this.personalAssetsRange = JsonNullable.<PersonalAssetsRangeEnum>of(personalAssetsRange);
-    
+    this.personalAssetsRange = personalAssetsRange;
+
     return this;
   }
 
@@ -2746,29 +2728,19 @@ public class PutUserRequest {
   @javax.annotation.Nullable
   @JsonIgnore
 
-  public PersonalAssetsRangeEnum getPersonalAssetsRange() {
-        return personalAssetsRange.orElse(null);
-  }
-
   @JsonProperty(JSON_PROPERTY_PERSONAL_ASSETS_RANGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public JsonNullable<PersonalAssetsRangeEnum> getPersonalAssetsRange_JsonNullable() {
-    return personalAssetsRange;
-  }
-  
-  @JsonProperty(JSON_PROPERTY_PERSONAL_ASSETS_RANGE)
-  public void setPersonalAssetsRange_JsonNullable(JsonNullable<PersonalAssetsRangeEnum> personalAssetsRange) {
-    this.personalAssetsRange = personalAssetsRange;
+  public PersonalAssetsRangeEnum getPersonalAssetsRange() {
+        return personalAssetsRange;
   }
 
   public void setPersonalAssetsRange(@javax.annotation.Nullable PersonalAssetsRangeEnum personalAssetsRange) {
-    this.personalAssetsRange = JsonNullable.<PersonalAssetsRangeEnum>of(personalAssetsRange);
+    this.personalAssetsRange = personalAssetsRange;
   }
 
   public PutUserRequest monthlyIncomeRange(@javax.annotation.Nullable MonthlyIncomeRangeEnum monthlyIncomeRange) {
-    this.monthlyIncomeRange = JsonNullable.<MonthlyIncomeRangeEnum>of(monthlyIncomeRange);
-    
+    this.monthlyIncomeRange = monthlyIncomeRange;
+
     return this;
   }
 
@@ -2779,24 +2751,15 @@ public class PutUserRequest {
   @javax.annotation.Nullable
   @JsonIgnore
 
-  public MonthlyIncomeRangeEnum getMonthlyIncomeRange() {
-        return monthlyIncomeRange.orElse(null);
-  }
 
   @JsonProperty(JSON_PROPERTY_MONTHLY_INCOME_RANGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public JsonNullable<MonthlyIncomeRangeEnum> getMonthlyIncomeRange_JsonNullable() {
+  public MonthlyIncomeRangeEnum getMonthlyIncomeRange() {
     return monthlyIncomeRange;
-  }
-  
-  @JsonProperty(JSON_PROPERTY_MONTHLY_INCOME_RANGE)
-  public void setMonthlyIncomeRange_JsonNullable(JsonNullable<MonthlyIncomeRangeEnum> monthlyIncomeRange) {
-    this.monthlyIncomeRange = monthlyIncomeRange;
   }
 
   public void setMonthlyIncomeRange(@javax.annotation.Nullable MonthlyIncomeRangeEnum monthlyIncomeRange) {
-    this.monthlyIncomeRange = JsonNullable.<MonthlyIncomeRangeEnum>of(monthlyIncomeRange);
+    this.monthlyIncomeRange = monthlyIncomeRange;
   }
 
 
@@ -2827,7 +2790,7 @@ public class PutUserRequest {
         Objects.equals(this.city, putUserRequest.city) &&
         Objects.equals(this.state, putUserRequest.state) &&
         Objects.equals(this.country, putUserRequest.country) &&
-        equalsNullable(this.distributionCountry, putUserRequest.distributionCountry) &&
+        Objects.equals(this.distributionCountry, putUserRequest.distributionCountry) &&
         Objects.equals(this.secondaryAddress1, putUserRequest.secondaryAddress1) &&
         Objects.equals(this.secondaryAddress2, putUserRequest.secondaryAddress2) &&
         Objects.equals(this.secondaryAddress3, putUserRequest.secondaryAddress3) &&
@@ -2869,9 +2832,9 @@ public class PutUserRequest {
         Objects.equals(this.sourceOfFunds, putUserRequest.sourceOfFunds) &&
         Objects.equals(this.legalSectorType, putUserRequest.legalSectorType) &&
         Objects.equals(this.isOnStockExchange, putUserRequest.isOnStockExchange) &&
-        equalsNullable(this.occupationCategory, putUserRequest.occupationCategory) &&
-        equalsNullable(this.personalAssetsRange, putUserRequest.personalAssetsRange) &&
-        equalsNullable(this.monthlyIncomeRange, putUserRequest.monthlyIncomeRange);
+        Objects.equals(this.occupationCategory, putUserRequest.occupationCategory) &&
+        Objects.equals(this.personalAssetsRange, putUserRequest.personalAssetsRange) &&
+        Objects.equals(this.monthlyIncomeRange, putUserRequest.monthlyIncomeRange);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -2880,7 +2843,7 @@ public class PutUserRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(userTag, accessTag, specifiedUSPerson, controllingPersonType, employeeType, title, firstname, lastname, middleNames, birthday, email, address1, address2, address3, postcode, city, state, country, hashCodeNullable(distributionCountry), secondaryAddress1, secondaryAddress2, secondaryAddress3, secondaryPostcode, secondaryCity, secondaryState, secondaryCountry, phone, mobile, nationality, nationalityOther, placeOfBirth, birthCountry, occupation, incomeRange, legalName, legalRegistrationNumber, legalTvaNumber, legalRegistrationDate, legalForm, legalShareCapital, legalSector, legalAnnualTurnOver, legalNetIncomeRange, legalNumberOfEmployeeRange, effectiveBeneficiary, language, taxNumber, taxResidence, position, personalAssets, activityOutsideEu, economicSanctions, residentCountriesSanctions, involvedSanctions, entitySanctionsQuestionnaire, timezone, occupationType, sourceOfFunds, legalSectorType, isOnStockExchange, hashCodeNullable(occupationCategory), hashCodeNullable(personalAssetsRange), hashCodeNullable(monthlyIncomeRange));
+    return Objects.hash(userTag, accessTag, specifiedUSPerson, controllingPersonType, employeeType, title, firstname, lastname, middleNames, birthday, email, address1, address2, address3, postcode, city, state, country, distributionCountry, secondaryAddress1, secondaryAddress2, secondaryAddress3, secondaryPostcode, secondaryCity, secondaryState, secondaryCountry, phone, mobile, nationality, nationalityOther, placeOfBirth, birthCountry, occupation, incomeRange, legalName, legalRegistrationNumber, legalTvaNumber, legalRegistrationDate, legalForm, legalShareCapital, legalSector, legalAnnualTurnOver, legalNetIncomeRange, legalNumberOfEmployeeRange, effectiveBeneficiary, language, taxNumber, taxResidence, position, personalAssets, activityOutsideEu, economicSanctions, residentCountriesSanctions, involvedSanctions, entitySanctionsQuestionnaire, timezone, occupationType, sourceOfFunds, legalSectorType, isOnStockExchange, occupationCategory, personalAssetsRange, monthlyIncomeRange);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -2973,4 +2936,3 @@ public class PutUserRequest {
   }
 
 }
-
