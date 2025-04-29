@@ -297,7 +297,7 @@ public class UserObjectUsersInner {
 
   public static final String JSON_PROPERTY_EMPLOYEE_TYPE = "employeeType";
   @javax.annotation.Nullable
-  private EmployeeTypeEnum employeeType = EmployeeTypeEnum.NUMBER_0;
+  private EmployeeTypeEnum employeeType;
 
   /**
    * When set to &#x60;1&#x60;, the user must have a US tax residence declared.  Should be set to &#x60;0&#x60; otherwise.  You may read more about who is considered a US Person in the [dedicated article](/guide/user-verification/tax-residence.html#the-specific-case-of-us-taxpayers). 

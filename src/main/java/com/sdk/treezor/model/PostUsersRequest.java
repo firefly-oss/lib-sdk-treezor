@@ -103,6 +103,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PostUsersRequest.JSON_PROPERTY_MONTHLY_INCOME_RANGE
 })
 @JsonTypeName("postUsers_request")
+@JsonInclude(JsonInclude.Include.NON_NULL)  // Add this line
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class PostUsersRequest {
   /**
@@ -281,7 +282,7 @@ public class PostUsersRequest {
 
   public static final String JSON_PROPERTY_CONTROLLING_PERSON_TYPE = "controllingPersonType";
   @javax.annotation.Nullable
-  private ControllingPersonTypeEnum controllingPersonType = ControllingPersonTypeEnum.NUMBER_0;
+  private ControllingPersonTypeEnum controllingPersonType;
 
   /**
    * The role of the user in [parent-children relationships](/guide/users/parent-children.html): * &#x60;0&#x60; – None (default) * &#x60;1&#x60; – Leader * &#x60;2&#x60; – Employee 
@@ -322,7 +323,7 @@ public class PostUsersRequest {
 
   public static final String JSON_PROPERTY_EMPLOYEE_TYPE = "employeeType";
   @javax.annotation.Nullable
-  private EmployeeTypeEnum employeeType = EmployeeTypeEnum.NUMBER_0;
+  private EmployeeTypeEnum employeeType;
 
   /**
    * The entity type of the legal entity: * &#x60;1&#x60; – Reporting Financial Institution * &#x60;2&#x60; – Non-Reporting Financial Institution * &#x60;3&#x60; – Active Non-Financial Entity - Governmental entities, Int. organizations * &#x60;4&#x60; – Active Non-Financial Entity - Other * &#x60;5&#x60; – Passive Non-Financial Entity - Investment entity that is not Participating Jurisdiction FI 
