@@ -165,8 +165,16 @@ public class ApiClient extends JavaTimeFormatter {
         }
         ObjectMapper mapper = new ObjectMapper();
         mapper.setDateFormat(dateFormat);
-        mapper.registerModule(new JavaTimeModule());
+
+        // Register JavaTimeModule for handling Java 8 date/time types
+        JavaTimeModule javaTimeModule = new JavaTimeModule();
+
+        // Register custom deserializer for OffsetDateTime
+        javaTimeModule.addDeserializer(OffsetDateTime.class, new CustomOffsetDateTimeDeserializer());
+
+        mapper.registerModule(javaTimeModule);
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
         SimpleModule module = new SimpleModule();
         module.addSerializer((Class<JsonNullable<?>>) (Class<?>) JsonNullable.class, new CustomJsonNullableSerializer());
         mapper.registerModule(module);
