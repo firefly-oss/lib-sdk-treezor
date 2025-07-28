@@ -130,9 +130,9 @@ public class UserObjectUsersInner {
    */
   public enum UserStatusEnum {
     CANCELED(String.valueOf("CANCELED")),
-    
+
     PENDING(String.valueOf("PENDING")),
-    
+
     VALIDATED(String.valueOf("VALIDATED"));
 
     private String value;
@@ -153,6 +153,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static UserStatusEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (UserStatusEnum b : UserStatusEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -179,9 +182,9 @@ public class UserObjectUsersInner {
    */
   public enum ParentTypeEnum {
     EMPLOYEE(String.valueOf("employee")),
-    
+
     LEADER(String.valueOf("leader")),
-    
+
     SHAREHOLDER(String.valueOf("shareholder"));
 
     private String value;
@@ -202,6 +205,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static ParentTypeEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (ParentTypeEnum b : ParentTypeEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -220,11 +226,11 @@ public class UserObjectUsersInner {
    */
   public enum ControllingPersonTypeEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1)),
-    
+
     NUMBER_2(Integer.valueOf(2)),
-    
+
     NUMBER_3(Integer.valueOf(3));
 
     private Integer value;
@@ -245,6 +251,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static ControllingPersonTypeEnum fromValue(Integer value) {
+      if (value == null) {
+        return null;
+      }
       for (ControllingPersonTypeEnum b : ControllingPersonTypeEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -263,9 +272,9 @@ public class UserObjectUsersInner {
    */
   public enum EmployeeTypeEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1)),
-    
+
     NUMBER_2(Integer.valueOf(2));
 
     private Integer value;
@@ -286,6 +295,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static EmployeeTypeEnum fromValue(Integer value) {
+      if (value == null) {
+        return null;
+      }
       for (EmployeeTypeEnum b : EmployeeTypeEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -297,14 +309,14 @@ public class UserObjectUsersInner {
 
   public static final String JSON_PROPERTY_EMPLOYEE_TYPE = "employeeType";
   @javax.annotation.Nullable
-  private EmployeeTypeEnum employeeType = EmployeeTypeEnum.NUMBER_0;
+  private EmployeeTypeEnum employeeType;
 
   /**
    * When set to &#x60;1&#x60;, the user must have a US tax residence declared.  Should be set to &#x60;0&#x60; otherwise.  You may read more about who is considered a US Person in the [dedicated article](/guide/user-verification/tax-residence.html#the-specific-case-of-us-taxpayers). 
    */
   public enum SpecifiedUSPersonEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1));
 
     private Integer value;
@@ -325,6 +337,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static SpecifiedUSPersonEnum fromValue(Integer value) {
+      if (value == null) {
+        return null;
+      }
       for (SpecifiedUSPersonEnum b : SpecifiedUSPersonEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -343,9 +358,9 @@ public class UserObjectUsersInner {
    */
   public enum TitleEnum {
     M(String.valueOf("M")),
-    
+
     MLLE(String.valueOf("MLLE")),
-    
+
     MME(String.valueOf("MME"));
 
     private String value;
@@ -366,6 +381,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static TitleEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (TitleEnum b : TitleEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -436,15 +454,15 @@ public class UserObjectUsersInner {
    */
   public enum DistributionCountryEnum {
     BE(String.valueOf("BE")),
-    
+
     DE(String.valueOf("DE")),
-    
+
     ES(String.valueOf("ES")),
-    
+
     FR(String.valueOf("FR")),
-    
+
     IT(String.valueOf("IT")),
-    
+
     NL(String.valueOf("NL"));
 
     private String value;
@@ -465,6 +483,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static DistributionCountryEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (DistributionCountryEnum b : DistributionCountryEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -476,7 +497,7 @@ public class UserObjectUsersInner {
 
   public static final String JSON_PROPERTY_DISTRIBUTION_COUNTRY = "distributionCountry";
   @javax.annotation.Nullable
-  private JsonNullable<DistributionCountryEnum> distributionCountry = JsonNullable.<DistributionCountryEnum>undefined();
+  private DistributionCountryEnum distributionCountry;
 
   public static final String JSON_PROPERTY_SECONDARY_ADDRESS1 = "secondaryAddress1";
   @javax.annotation.Nullable
@@ -579,19 +600,19 @@ public class UserObjectUsersInner {
    */
   public enum LegalAnnualTurnOverEnum {
     _0_39(String.valueOf("0-39")),
-    
+
     _40_99(String.valueOf("40-99")),
-    
+
     _100_249(String.valueOf("100-249")),
-    
+
     _250_999(String.valueOf("250-999")),
-    
+
     _1000_2999(String.valueOf("1000-2999")),
-    
+
     _3000_9999(String.valueOf("3000-9999")),
-    
+
     _10000_99999(String.valueOf("10000-99999")),
-    
+
     _100000_(String.valueOf("100000-*"));
 
     private String value;
@@ -612,6 +633,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static LegalAnnualTurnOverEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (LegalAnnualTurnOverEnum b : LegalAnnualTurnOverEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -630,15 +654,15 @@ public class UserObjectUsersInner {
    */
   public enum LegalNetIncomeRangeEnum {
     _0_4(String.valueOf("0-4")),
-    
+
     _5_9(String.valueOf("5-9")),
-    
+
     _10_49(String.valueOf("10-49")),
-    
+
     _50_149(String.valueOf("50-149")),
-    
+
     _150_499(String.valueOf("150-499")),
-    
+
     _500_(String.valueOf("500-*"));
 
     private String value;
@@ -659,6 +683,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static LegalNetIncomeRangeEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (LegalNetIncomeRangeEnum b : LegalNetIncomeRangeEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -677,13 +704,13 @@ public class UserObjectUsersInner {
    */
   public enum LegalNumberOfEmployeeRangeEnum {
     _0(String.valueOf("0")),
-    
+
     _1_9(String.valueOf("1-9")),
-    
+
     _10_99(String.valueOf("10-99")),
-    
+
     _100_249(String.valueOf("100-249")),
-    
+
     _250_(String.valueOf("250-*"));
 
     private String value;
@@ -704,6 +731,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static LegalNumberOfEmployeeRangeEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (LegalNumberOfEmployeeRangeEnum b : LegalNumberOfEmployeeRangeEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -726,17 +756,17 @@ public class UserObjectUsersInner {
    */
   public enum KycLevelEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1)),
-    
+
     NUMBER_2(Integer.valueOf(2)),
-    
+
     NUMBER_3(Integer.valueOf(3)),
-    
+
     NUMBER_4(Integer.valueOf(4)),
-    
+
     NUMBER_5(Integer.valueOf(5)),
-    
+
     NUMBER_6(Integer.valueOf(6));
 
     private Integer value;
@@ -757,6 +787,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static KycLevelEnum fromValue(Integer value) {
+      if (value == null) {
+        return null;
+      }
       for (KycLevelEnum b : KycLevelEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -775,15 +808,15 @@ public class UserObjectUsersInner {
    */
   public enum KycReviewEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1)),
-    
+
     NUMBER_2(Integer.valueOf(2)),
-    
+
     NUMBER_3(Integer.valueOf(3)),
-    
+
     NUMBER_6(Integer.valueOf(6)),
-    
+
     NUMBER_7(Integer.valueOf(7));
 
     private Integer value;
@@ -804,6 +837,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static KycReviewEnum fromValue(Integer value) {
+      if (value == null) {
+        return null;
+      }
       for (KycReviewEnum b : KycReviewEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -862,7 +898,7 @@ public class UserObjectUsersInner {
    */
   public enum ActivityOutsideEuEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1));
 
     private Integer value;
@@ -883,6 +919,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static ActivityOutsideEuEnum fromValue(Integer value) {
+      if (value == null) {
+        return null;
+      }
       for (ActivityOutsideEuEnum b : ActivityOutsideEuEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -901,7 +940,7 @@ public class UserObjectUsersInner {
    */
   public enum EconomicSanctionsEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1));
 
     private Integer value;
@@ -922,6 +961,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static EconomicSanctionsEnum fromValue(Integer value) {
+      if (value == null) {
+        return null;
+      }
       for (EconomicSanctionsEnum b : EconomicSanctionsEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -940,7 +982,7 @@ public class UserObjectUsersInner {
    */
   public enum ResidentCountriesSanctionsEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1));
 
     private Integer value;
@@ -961,6 +1003,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static ResidentCountriesSanctionsEnum fromValue(Integer value) {
+      if (value == null) {
+        return null;
+      }
       for (ResidentCountriesSanctionsEnum b : ResidentCountriesSanctionsEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -979,7 +1024,7 @@ public class UserObjectUsersInner {
    */
   public enum InvolvedSanctionsEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1));
 
     private Integer value;
@@ -1000,6 +1045,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static InvolvedSanctionsEnum fromValue(Integer value) {
+      if (value == null) {
+        return null;
+      }
       for (InvolvedSanctionsEnum b : InvolvedSanctionsEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -1018,13 +1066,13 @@ public class UserObjectUsersInner {
    */
   public enum EntitySanctionsQuestionnaireEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1)),
-    
+
     NUMBER_2(Integer.valueOf(2)),
-    
+
     NUMBER_3(Integer.valueOf(3)),
-    
+
     NUMBER_4(Integer.valueOf(4));
 
     private Integer value;
@@ -1045,6 +1093,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static EntitySanctionsQuestionnaireEnum fromValue(Integer value) {
+      if (value == null) {
+        return null;
+      }
       for (EntitySanctionsQuestionnaireEnum b : EntitySanctionsQuestionnaireEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -1071,13 +1122,13 @@ public class UserObjectUsersInner {
    */
   public enum OccupationTypeEnum {
     PRIVATE_SECTOR_EMPLOYEES(String.valueOf("private_sector_employees")),
-    
+
     PUBLIC_SECTOR_EMPLOYEES(String.valueOf("public_sector_employees")),
-    
+
     RETIRED_PEOPLE_AND_STUDENTS(String.valueOf("retired_people_and_students")),
-    
+
     SELF_EMPLOYED(String.valueOf("self_employed")),
-    
+
     WITHOUT_ANY_PROFESSIONAL_ACTIVITY(String.valueOf("without_any_professional_activity"));
 
     private String value;
@@ -1098,6 +1149,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static OccupationTypeEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (OccupationTypeEnum b : OccupationTypeEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -1116,21 +1170,21 @@ public class UserObjectUsersInner {
    */
   public enum SourceOfFundsEnum {
     DONATION(String.valueOf("donation")),
-    
+
     INHERITANCE(String.valueOf("inheritance")),
-    
+
     LOAN(String.valueOf("loan")),
-    
+
     LOTTERY(String.valueOf("lottery")),
-    
+
     PENSION(String.valueOf("pension")),
-    
+
     PROCEEDS_FROM_INVESTMENT(String.valueOf("proceeds_from_investment")),
-    
+
     PROCEEDS_FROM_SALE(String.valueOf("proceeds_from_sale")),
-    
+
     SALARY(String.valueOf("salary")),
-    
+
     SAVINGS(String.valueOf("savings"));
 
     private String value;
@@ -1151,6 +1205,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static SourceOfFundsEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (SourceOfFundsEnum b : SourceOfFundsEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -1169,7 +1226,7 @@ public class UserObjectUsersInner {
    */
   public enum LegalSectorTypeEnum {
     NACE(String.valueOf("NACE")),
-    
+
     NAF(String.valueOf("NAF"));
 
     private String value;
@@ -1190,6 +1247,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static LegalSectorTypeEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (LegalSectorTypeEnum b : LegalSectorTypeEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -1208,7 +1268,7 @@ public class UserObjectUsersInner {
    */
   public enum IsOnStockExchangeEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1));
 
     private Integer value;
@@ -1229,6 +1289,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static IsOnStockExchangeEnum fromValue(Integer value) {
+      if (value == null) {
+        return null;
+      }
       for (IsOnStockExchangeEnum b : IsOnStockExchangeEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -1247,11 +1310,11 @@ public class UserObjectUsersInner {
    */
   public enum CodeStatusEnum {
     _110005(String.valueOf("110005")),
-    
+
     _110006(String.valueOf("110006")),
-    
+
     _110009(String.valueOf("110009")),
-    
+
     _110012(String.valueOf("110012"));
 
     private String value;
@@ -1272,6 +1335,9 @@ public class UserObjectUsersInner {
 
     @JsonCreator
     public static CodeStatusEnum fromValue(String value) {
+      if (value == null || value.isEmpty()) {
+        return null;
+      }
       for (CodeStatusEnum b : CodeStatusEnum.values()) {
         if (b.value.equals(value)) {
           return b;
@@ -1314,33 +1380,33 @@ public class UserObjectUsersInner {
    */
   public enum OccupationCategoryEnum {
     NUMBER_1(Integer.valueOf(1)),
-    
+
     NUMBER_2(Integer.valueOf(2)),
-    
+
     NUMBER_3(Integer.valueOf(3)),
-    
+
     NUMBER_4(Integer.valueOf(4)),
-    
+
     NUMBER_5(Integer.valueOf(5)),
-    
+
     NUMBER_6(Integer.valueOf(6)),
-    
+
     NUMBER_7(Integer.valueOf(7)),
-    
+
     NUMBER_8(Integer.valueOf(8)),
-    
+
     NUMBER_9(Integer.valueOf(9)),
-    
+
     NUMBER_10(Integer.valueOf(10)),
-    
+
     NUMBER_11(Integer.valueOf(11)),
-    
+
     NUMBER_12(Integer.valueOf(12)),
-    
+
     NUMBER_13(Integer.valueOf(13)),
-    
+
     NUMBER_14(Integer.valueOf(14)),
-    
+
     NUMBER_15(Integer.valueOf(15));
 
     private Integer value;
@@ -1372,26 +1438,26 @@ public class UserObjectUsersInner {
 
   public static final String JSON_PROPERTY_OCCUPATION_CATEGORY = "occupationCategory";
   @javax.annotation.Nullable
-  private JsonNullable<OccupationCategoryEnum> occupationCategory = JsonNullable.<OccupationCategoryEnum>undefined();
+  private OccupationCategoryEnum occupationCategory;
 
   /**
    * The personal assets range of the user. See [Personal Assets Range](/guide/users/physical.html#personal-assets-range-personalassetsrange) for the list of values. 
    */
   public enum PersonalAssetsRangeEnum {
     NUMBER_0(Integer.valueOf(0)),
-    
+
     NUMBER_1(Integer.valueOf(1)),
-    
+
     NUMBER_2(Integer.valueOf(2)),
-    
+
     NUMBER_3(Integer.valueOf(3)),
-    
+
     NUMBER_4(Integer.valueOf(4)),
-    
+
     NUMBER_5(Integer.valueOf(5)),
-    
+
     NUMBER_6(Integer.valueOf(6)),
-    
+
     NUMBER_7(Integer.valueOf(7));
 
     private Integer value;
@@ -1423,24 +1489,24 @@ public class UserObjectUsersInner {
 
   public static final String JSON_PROPERTY_PERSONAL_ASSETS_RANGE = "personalAssetsRange";
   @javax.annotation.Nullable
-  private JsonNullable<PersonalAssetsRangeEnum> personalAssetsRange = JsonNullable.<PersonalAssetsRangeEnum>undefined();
+  private PersonalAssetsRangeEnum personalAssetsRange;
 
   /**
    * Net monthly income of the user. See [Monthly Income Range](/guide/users/physical.html#monthly-income-range-monthlyincomerange) for the list of values. 
    */
   public enum MonthlyIncomeRangeEnum {
     NUMBER_1(Integer.valueOf(1)),
-    
+
     NUMBER_2(Integer.valueOf(2)),
-    
+
     NUMBER_3(Integer.valueOf(3)),
-    
+
     NUMBER_4(Integer.valueOf(4)),
-    
+
     NUMBER_5(Integer.valueOf(5)),
-    
+
     NUMBER_6(Integer.valueOf(6)),
-    
+
     NUMBER_7(Integer.valueOf(7));
 
     private Integer value;
@@ -1472,7 +1538,7 @@ public class UserObjectUsersInner {
 
   public static final String JSON_PROPERTY_MONTHLY_INCOME_RANGE = "monthlyIncomeRange";
   @javax.annotation.Nullable
-  private JsonNullable<MonthlyIncomeRangeEnum> monthlyIncomeRange = JsonNullable.<MonthlyIncomeRangeEnum>undefined();
+  private MonthlyIncomeRangeEnum monthlyIncomeRange;
 
   public static final String JSON_PROPERTY_BIRTH_CITY_CODE = "birthCityCode";
   @javax.annotation.Nullable
@@ -1492,7 +1558,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner userId(@javax.annotation.Nullable Integer userId) {
-    
+
     this.userId = userId;
     return this;
   }
@@ -1517,7 +1583,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner userStatus(@javax.annotation.Nullable UserStatusEnum userStatus) {
-    
+
     this.userStatus = userStatus;
     return this;
   }
@@ -1542,7 +1608,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner userTag(@javax.annotation.Nullable String userTag) {
-    
+
     this.userTag = userTag;
     return this;
   }
@@ -1567,7 +1633,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner parentUserId(@javax.annotation.Nullable Integer parentUserId) {
-    
+
     this.parentUserId = parentUserId;
     return this;
   }
@@ -1592,7 +1658,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner parentType(@javax.annotation.Nullable ParentTypeEnum parentType) {
-    
+
     this.parentType = parentType;
     return this;
   }
@@ -1617,7 +1683,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner controllingPersonType(@javax.annotation.Nullable ControllingPersonTypeEnum controllingPersonType) {
-    
+
     this.controllingPersonType = controllingPersonType;
     return this;
   }
@@ -1642,7 +1708,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner employeeType(@javax.annotation.Nullable EmployeeTypeEnum employeeType) {
-    
+
     this.employeeType = employeeType;
     return this;
   }
@@ -1667,7 +1733,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner specifiedUSPerson(@javax.annotation.Nullable SpecifiedUSPersonEnum specifiedUSPerson) {
-    
+
     this.specifiedUSPerson = specifiedUSPerson;
     return this;
   }
@@ -1692,7 +1758,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner title(@javax.annotation.Nullable TitleEnum title) {
-    
+
     this.title = title;
     return this;
   }
@@ -1717,7 +1783,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner firstname(@javax.annotation.Nullable String firstname) {
-    
+
     this.firstname = firstname;
     return this;
   }
@@ -1742,7 +1808,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner lastname(@javax.annotation.Nullable String lastname) {
-    
+
     this.lastname = lastname;
     return this;
   }
@@ -1767,7 +1833,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner middleNames(@javax.annotation.Nullable String middleNames) {
-    
+
     this.middleNames = middleNames;
     return this;
   }
@@ -1792,7 +1858,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner birthday(@javax.annotation.Nullable String birthday) {
-    
+
     this.birthday = birthday;
     return this;
   }
@@ -1817,7 +1883,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner email(@javax.annotation.Nullable String email) {
-    
+
     this.email = email;
     return this;
   }
@@ -1842,7 +1908,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner address1(@javax.annotation.Nullable String address1) {
-    
+
     this.address1 = address1;
     return this;
   }
@@ -1867,7 +1933,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner address2(@javax.annotation.Nullable String address2) {
-    
+
     this.address2 = address2;
     return this;
   }
@@ -1892,7 +1958,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner address3(@javax.annotation.Nullable String address3) {
-    
+
     this.address3 = address3;
     return this;
   }
@@ -1917,7 +1983,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner postcode(@javax.annotation.Nullable String postcode) {
-    
+
     this.postcode = postcode;
     return this;
   }
@@ -1942,7 +2008,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner city(@javax.annotation.Nullable String city) {
-    
+
     this.city = city;
     return this;
   }
@@ -1967,7 +2033,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner state(@javax.annotation.Nullable String state) {
-    
+
     this.state = state;
     return this;
   }
@@ -1992,7 +2058,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner country(@javax.annotation.Nullable String country) {
-    
+
     this.country = country;
     return this;
   }
@@ -2017,7 +2083,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner countryName(@javax.annotation.Nullable String countryName) {
-    
+
     this.countryName = countryName;
     return this;
   }
@@ -2042,8 +2108,8 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner distributionCountry(@javax.annotation.Nullable DistributionCountryEnum distributionCountry) {
-    this.distributionCountry = JsonNullable.<DistributionCountryEnum>of(distributionCountry);
-    
+    this.distributionCountry = distributionCountry;
+
     return this;
   }
 
@@ -2055,27 +2121,15 @@ public class UserObjectUsersInner {
   @JsonIgnore
 
   public DistributionCountryEnum getDistributionCountry() {
-        return distributionCountry.orElse(null);
-  }
-
-  @JsonProperty(JSON_PROPERTY_DISTRIBUTION_COUNTRY)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public JsonNullable<DistributionCountryEnum> getDistributionCountry_JsonNullable() {
-    return distributionCountry;
-  }
-  
-  @JsonProperty(JSON_PROPERTY_DISTRIBUTION_COUNTRY)
-  public void setDistributionCountry_JsonNullable(JsonNullable<DistributionCountryEnum> distributionCountry) {
-    this.distributionCountry = distributionCountry;
+        return distributionCountry;
   }
 
   public void setDistributionCountry(@javax.annotation.Nullable DistributionCountryEnum distributionCountry) {
-    this.distributionCountry = JsonNullable.<DistributionCountryEnum>of(distributionCountry);
+    this.distributionCountry = distributionCountry;
   }
 
   public UserObjectUsersInner secondaryAddress1(@javax.annotation.Nullable String secondaryAddress1) {
-    
+
     this.secondaryAddress1 = secondaryAddress1;
     return this;
   }
@@ -2100,7 +2154,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner secondaryAddress2(@javax.annotation.Nullable String secondaryAddress2) {
-    
+
     this.secondaryAddress2 = secondaryAddress2;
     return this;
   }
@@ -2125,7 +2179,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner secondaryAddress3(@javax.annotation.Nullable String secondaryAddress3) {
-    
+
     this.secondaryAddress3 = secondaryAddress3;
     return this;
   }
@@ -2150,7 +2204,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner secondaryPostcode(@javax.annotation.Nullable String secondaryPostcode) {
-    
+
     this.secondaryPostcode = secondaryPostcode;
     return this;
   }
@@ -2175,7 +2229,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner secondaryCity(@javax.annotation.Nullable String secondaryCity) {
-    
+
     this.secondaryCity = secondaryCity;
     return this;
   }
@@ -2200,7 +2254,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner secondaryState(@javax.annotation.Nullable String secondaryState) {
-    
+
     this.secondaryState = secondaryState;
     return this;
   }
@@ -2225,7 +2279,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner secondaryCountry(@javax.annotation.Nullable String secondaryCountry) {
-    
+
     this.secondaryCountry = secondaryCountry;
     return this;
   }
@@ -2250,7 +2304,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner clientId(@javax.annotation.Nullable String clientId) {
-    
+
     this.clientId = clientId;
     return this;
   }
@@ -2275,7 +2329,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner phone(@javax.annotation.Nullable String phone) {
-    
+
     this.phone = phone;
     return this;
   }
@@ -2300,7 +2354,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner mobile(@javax.annotation.Nullable String mobile) {
-    
+
     this.mobile = mobile;
     return this;
   }
@@ -2325,7 +2379,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner nationality(@javax.annotation.Nullable String nationality) {
-    
+
     this.nationality = nationality;
     return this;
   }
@@ -2350,7 +2404,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner nationalityOther(@javax.annotation.Nullable String nationalityOther) {
-    
+
     this.nationalityOther = nationalityOther;
     return this;
   }
@@ -2375,7 +2429,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner placeOfBirth(@javax.annotation.Nullable String placeOfBirth) {
-    
+
     this.placeOfBirth = placeOfBirth;
     return this;
   }
@@ -2400,7 +2454,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner birthCountry(@javax.annotation.Nullable String birthCountry) {
-    
+
     this.birthCountry = birthCountry;
     return this;
   }
@@ -2425,7 +2479,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner occupation(@javax.annotation.Nullable String occupation) {
-    
+
     this.occupation = occupation;
     return this;
   }
@@ -2450,7 +2504,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner incomeRange(@javax.annotation.Nullable String incomeRange) {
-    
+
     this.incomeRange = incomeRange;
     return this;
   }
@@ -2477,7 +2531,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner legalName(@javax.annotation.Nullable String legalName) {
-    
+
     this.legalName = legalName;
     return this;
   }
@@ -2502,7 +2556,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner legalNameEmbossed(@javax.annotation.Nullable String legalNameEmbossed) {
-    
+
     this.legalNameEmbossed = legalNameEmbossed;
     return this;
   }
@@ -2527,7 +2581,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner legalRegistrationNumber(@javax.annotation.Nullable String legalRegistrationNumber) {
-    
+
     this.legalRegistrationNumber = legalRegistrationNumber;
     return this;
   }
@@ -2552,7 +2606,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner legalTvaNumber(@javax.annotation.Nullable String legalTvaNumber) {
-    
+
     this.legalTvaNumber = legalTvaNumber;
     return this;
   }
@@ -2577,7 +2631,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner legalRegistrationDate(@javax.annotation.Nullable String legalRegistrationDate) {
-    
+
     this.legalRegistrationDate = legalRegistrationDate;
     return this;
   }
@@ -2602,7 +2656,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner legalForm(@javax.annotation.Nullable String legalForm) {
-    
+
     this.legalForm = legalForm;
     return this;
   }
@@ -2627,7 +2681,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner legalShareCapital(@javax.annotation.Nullable Integer legalShareCapital) {
-    
+
     this.legalShareCapital = legalShareCapital;
     return this;
   }
@@ -2652,7 +2706,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner legalSector(@javax.annotation.Nullable String legalSector) {
-    
+
     this.legalSector = legalSector;
     return this;
   }
@@ -2677,7 +2731,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner legalAnnualTurnOver(@javax.annotation.Nullable LegalAnnualTurnOverEnum legalAnnualTurnOver) {
-    
+
     this.legalAnnualTurnOver = legalAnnualTurnOver;
     return this;
   }
@@ -2702,7 +2756,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner legalNetIncomeRange(@javax.annotation.Nullable LegalNetIncomeRangeEnum legalNetIncomeRange) {
-    
+
     this.legalNetIncomeRange = legalNetIncomeRange;
     return this;
   }
@@ -2727,7 +2781,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner legalNumberOfEmployeeRange(@javax.annotation.Nullable LegalNumberOfEmployeeRangeEnum legalNumberOfEmployeeRange) {
-    
+
     this.legalNumberOfEmployeeRange = legalNumberOfEmployeeRange;
     return this;
   }
@@ -2752,7 +2806,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner effectiveBeneficiary(@javax.annotation.Nullable Integer effectiveBeneficiary) {
-    
+
     this.effectiveBeneficiary = effectiveBeneficiary;
     return this;
   }
@@ -2777,7 +2831,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner kycLevel(@javax.annotation.Nullable KycLevelEnum kycLevel) {
-    
+
     this.kycLevel = kycLevel;
     return this;
   }
@@ -2802,7 +2856,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner kycReview(@javax.annotation.Nullable KycReviewEnum kycReview) {
-    
+
     this.kycReview = kycReview;
     return this;
   }
@@ -2827,7 +2881,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner kycReviewComment(@javax.annotation.Nullable String kycReviewComment) {
-    
+
     this.kycReviewComment = kycReviewComment;
     return this;
   }
@@ -2852,7 +2906,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner isFreezed(@javax.annotation.Nullable Integer isFreezed) {
-    
+
     this.isFreezed = isFreezed;
     return this;
   }
@@ -2879,7 +2933,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner isFrozen(@javax.annotation.Nullable Integer isFrozen) {
-    
+
     this.isFrozen = isFrozen;
     return this;
   }
@@ -2904,7 +2958,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner language(@javax.annotation.Nullable String language) {
-    
+
     this.language = language;
     return this;
   }
@@ -2929,7 +2983,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner optInMailing(@javax.annotation.Nullable Integer optInMailing) {
-    
+
     this.optInMailing = optInMailing;
     return this;
   }
@@ -2968,7 +3022,7 @@ public class UserObjectUsersInner {
 
 
   public UserObjectUsersInner taxNumber(@javax.annotation.Nullable String taxNumber) {
-    
+
     this.taxNumber = taxNumber;
     return this;
   }
@@ -2995,7 +3049,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner taxResidence(@javax.annotation.Nullable String taxResidence) {
-    
+
     this.taxResidence = taxResidence;
     return this;
   }
@@ -3022,7 +3076,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner position(@javax.annotation.Nullable String position) {
-    
+
     this.position = position;
     return this;
   }
@@ -3047,7 +3101,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner personalAssets(@javax.annotation.Nullable String personalAssets) {
-    
+
     this.personalAssets = personalAssets;
     return this;
   }
@@ -3074,7 +3128,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner activityOutsideEu(@javax.annotation.Nullable ActivityOutsideEuEnum activityOutsideEu) {
-    
+
     this.activityOutsideEu = activityOutsideEu;
     return this;
   }
@@ -3099,7 +3153,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner economicSanctions(@javax.annotation.Nullable EconomicSanctionsEnum economicSanctions) {
-    
+
     this.economicSanctions = economicSanctions;
     return this;
   }
@@ -3124,7 +3178,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner residentCountriesSanctions(@javax.annotation.Nullable ResidentCountriesSanctionsEnum residentCountriesSanctions) {
-    
+
     this.residentCountriesSanctions = residentCountriesSanctions;
     return this;
   }
@@ -3149,7 +3203,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner involvedSanctions(@javax.annotation.Nullable InvolvedSanctionsEnum involvedSanctions) {
-    
+
     this.involvedSanctions = involvedSanctions;
     return this;
   }
@@ -3174,7 +3228,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner entitySanctionsQuestionnaire(@javax.annotation.Nullable EntitySanctionsQuestionnaireEnum entitySanctionsQuestionnaire) {
-    
+
     this.entitySanctionsQuestionnaire = entitySanctionsQuestionnaire;
     return this;
   }
@@ -3199,7 +3253,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner sanctionsQuestionnaireDate(@javax.annotation.Nullable OffsetDateTime sanctionsQuestionnaireDate) {
-    
+
     this.sanctionsQuestionnaireDate = sanctionsQuestionnaireDate;
     return this;
   }
@@ -3224,7 +3278,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner timezone(@javax.annotation.Nullable String timezone) {
-    
+
     this.timezone = timezone;
     return this;
   }
@@ -3249,7 +3303,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner occupationType(@javax.annotation.Nullable OccupationTypeEnum occupationType) {
-    
+
     this.occupationType = occupationType;
     return this;
   }
@@ -3276,7 +3330,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner sourceOfFunds(@javax.annotation.Nullable SourceOfFundsEnum sourceOfFunds) {
-    
+
     this.sourceOfFunds = sourceOfFunds;
     return this;
   }
@@ -3301,7 +3355,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner legalSectorType(@javax.annotation.Nullable LegalSectorTypeEnum legalSectorType) {
-    
+
     this.legalSectorType = legalSectorType;
     return this;
   }
@@ -3326,7 +3380,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner isOnStockExchange(@javax.annotation.Nullable IsOnStockExchangeEnum isOnStockExchange) {
-    
+
     this.isOnStockExchange = isOnStockExchange;
     return this;
   }
@@ -3351,7 +3405,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner codeStatus(@javax.annotation.Nullable CodeStatusEnum codeStatus) {
-    
+
     this.codeStatus = codeStatus;
     return this;
   }
@@ -3376,7 +3430,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner informationStatus(@javax.annotation.Nullable String informationStatus) {
-    
+
     this.informationStatus = informationStatus;
     return this;
   }
@@ -3401,7 +3455,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner createdDate(@javax.annotation.Nullable OffsetDateTime createdDate) {
-    
+
     this.createdDate = createdDate;
     return this;
   }
@@ -3426,7 +3480,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner modifiedDate(@javax.annotation.Nullable OffsetDateTime modifiedDate) {
-    
+
     this.modifiedDate = modifiedDate;
     return this;
   }
@@ -3451,7 +3505,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner walletCount(@javax.annotation.Nullable Integer walletCount) {
-    
+
     this.walletCount = walletCount;
     return this;
   }
@@ -3476,7 +3530,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner payinCount(@javax.annotation.Nullable Integer payinCount) {
-    
+
     this.payinCount = payinCount;
     return this;
   }
@@ -3501,7 +3555,7 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner totalRows(@javax.annotation.Nullable Integer totalRows) {
-    
+
     this.totalRows = totalRows;
     return this;
   }
@@ -3526,8 +3580,8 @@ public class UserObjectUsersInner {
   }
 
   public UserObjectUsersInner occupationCategory(@javax.annotation.Nullable OccupationCategoryEnum occupationCategory) {
-    this.occupationCategory = JsonNullable.<OccupationCategoryEnum>of(occupationCategory);
-    
+    this.occupationCategory = occupationCategory;
+
     return this;
   }
 
@@ -3537,30 +3591,17 @@ public class UserObjectUsersInner {
    */
   @javax.annotation.Nullable
   @JsonIgnore
-
   public OccupationCategoryEnum getOccupationCategory() {
-        return occupationCategory.orElse(null);
-  }
-
-  @JsonProperty(JSON_PROPERTY_OCCUPATION_CATEGORY)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public JsonNullable<OccupationCategoryEnum> getOccupationCategory_JsonNullable() {
-    return occupationCategory;
-  }
-  
-  @JsonProperty(JSON_PROPERTY_OCCUPATION_CATEGORY)
-  public void setOccupationCategory_JsonNullable(JsonNullable<OccupationCategoryEnum> occupationCategory) {
-    this.occupationCategory = occupationCategory;
+        return occupationCategory;
   }
 
   public void setOccupationCategory(@javax.annotation.Nullable OccupationCategoryEnum occupationCategory) {
-    this.occupationCategory = JsonNullable.<OccupationCategoryEnum>of(occupationCategory);
+    this.occupationCategory = occupationCategory;
   }
 
   public UserObjectUsersInner personalAssetsRange(@javax.annotation.Nullable PersonalAssetsRangeEnum personalAssetsRange) {
-    this.personalAssetsRange = JsonNullable.<PersonalAssetsRangeEnum>of(personalAssetsRange);
-    
+    this.personalAssetsRange = personalAssetsRange;
+
     return this;
   }
 
@@ -3572,28 +3613,16 @@ public class UserObjectUsersInner {
   @JsonIgnore
 
   public PersonalAssetsRangeEnum getPersonalAssetsRange() {
-        return personalAssetsRange.orElse(null);
-  }
-
-  @JsonProperty(JSON_PROPERTY_PERSONAL_ASSETS_RANGE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public JsonNullable<PersonalAssetsRangeEnum> getPersonalAssetsRange_JsonNullable() {
-    return personalAssetsRange;
-  }
-  
-  @JsonProperty(JSON_PROPERTY_PERSONAL_ASSETS_RANGE)
-  public void setPersonalAssetsRange_JsonNullable(JsonNullable<PersonalAssetsRangeEnum> personalAssetsRange) {
-    this.personalAssetsRange = personalAssetsRange;
+        return personalAssetsRange;
   }
 
   public void setPersonalAssetsRange(@javax.annotation.Nullable PersonalAssetsRangeEnum personalAssetsRange) {
-    this.personalAssetsRange = JsonNullable.<PersonalAssetsRangeEnum>of(personalAssetsRange);
+    this.personalAssetsRange = personalAssetsRange;
   }
 
   public UserObjectUsersInner monthlyIncomeRange(@javax.annotation.Nullable MonthlyIncomeRangeEnum monthlyIncomeRange) {
-    this.monthlyIncomeRange = JsonNullable.<MonthlyIncomeRangeEnum>of(monthlyIncomeRange);
-    
+    this.monthlyIncomeRange = monthlyIncomeRange;
+
     return this;
   }
 
@@ -3603,30 +3632,18 @@ public class UserObjectUsersInner {
    */
   @javax.annotation.Nullable
   @JsonIgnore
-
   public MonthlyIncomeRangeEnum getMonthlyIncomeRange() {
-        return monthlyIncomeRange.orElse(null);
+        return monthlyIncomeRange;
   }
 
-  @JsonProperty(JSON_PROPERTY_MONTHLY_INCOME_RANGE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public JsonNullable<MonthlyIncomeRangeEnum> getMonthlyIncomeRange_JsonNullable() {
-    return monthlyIncomeRange;
-  }
-  
-  @JsonProperty(JSON_PROPERTY_MONTHLY_INCOME_RANGE)
-  public void setMonthlyIncomeRange_JsonNullable(JsonNullable<MonthlyIncomeRangeEnum> monthlyIncomeRange) {
-    this.monthlyIncomeRange = monthlyIncomeRange;
-  }
 
   public void setMonthlyIncomeRange(@javax.annotation.Nullable MonthlyIncomeRangeEnum monthlyIncomeRange) {
-    this.monthlyIncomeRange = JsonNullable.<MonthlyIncomeRangeEnum>of(monthlyIncomeRange);
+    this.monthlyIncomeRange = monthlyIncomeRange;
   }
 
   public UserObjectUsersInner birthCityCode(@javax.annotation.Nullable String birthCityCode) {
     this.birthCityCode = JsonNullable.<String>of(birthCityCode);
-    
+
     return this;
   }
 
@@ -3647,7 +3664,7 @@ public class UserObjectUsersInner {
   public JsonNullable<String> getBirthCityCode_JsonNullable() {
     return birthCityCode;
   }
-  
+
   @JsonProperty(JSON_PROPERTY_BIRTH_CITY_CODE)
   public void setBirthCityCode_JsonNullable(JsonNullable<String> birthCityCode) {
     this.birthCityCode = birthCityCode;
@@ -3689,7 +3706,7 @@ public class UserObjectUsersInner {
         Objects.equals(this.state, userObjectUsersInner.state) &&
         Objects.equals(this.country, userObjectUsersInner.country) &&
         Objects.equals(this.countryName, userObjectUsersInner.countryName) &&
-        equalsNullable(this.distributionCountry, userObjectUsersInner.distributionCountry) &&
+        Objects.equals(this.distributionCountry, userObjectUsersInner.distributionCountry) &&
         Objects.equals(this.secondaryAddress1, userObjectUsersInner.secondaryAddress1) &&
         Objects.equals(this.secondaryAddress2, userObjectUsersInner.secondaryAddress2) &&
         Objects.equals(this.secondaryAddress3, userObjectUsersInner.secondaryAddress3) &&
@@ -3747,10 +3764,7 @@ public class UserObjectUsersInner {
         Objects.equals(this.modifiedDate, userObjectUsersInner.modifiedDate) &&
         Objects.equals(this.walletCount, userObjectUsersInner.walletCount) &&
         Objects.equals(this.payinCount, userObjectUsersInner.payinCount) &&
-        Objects.equals(this.totalRows, userObjectUsersInner.totalRows) &&
-        equalsNullable(this.occupationCategory, userObjectUsersInner.occupationCategory) &&
-        equalsNullable(this.personalAssetsRange, userObjectUsersInner.personalAssetsRange) &&
-        equalsNullable(this.monthlyIncomeRange, userObjectUsersInner.monthlyIncomeRange) &&
+        Objects.equals(this.totalRows, userObjectUsersInner.totalRows) && Objects.equals(this.occupationCategory, userObjectUsersInner.occupationCategory) && Objects.equals(this.personalAssetsRange, userObjectUsersInner.personalAssetsRange) && Objects.equals(this.monthlyIncomeRange, userObjectUsersInner.monthlyIncomeRange) &&
         equalsNullable(this.birthCityCode, userObjectUsersInner.birthCityCode);
   }
 
@@ -3760,7 +3774,7 @@ public class UserObjectUsersInner {
 
   @Override
   public int hashCode() {
-    return Objects.hash(userId, userStatus, userTag, parentUserId, parentType, controllingPersonType, employeeType, specifiedUSPerson, title, firstname, lastname, middleNames, birthday, email, address1, address2, address3, postcode, city, state, country, countryName, hashCodeNullable(distributionCountry), secondaryAddress1, secondaryAddress2, secondaryAddress3, secondaryPostcode, secondaryCity, secondaryState, secondaryCountry, clientId, phone, mobile, nationality, nationalityOther, placeOfBirth, birthCountry, occupation, incomeRange, legalName, legalNameEmbossed, legalRegistrationNumber, legalTvaNumber, legalRegistrationDate, legalForm, legalShareCapital, legalSector, legalAnnualTurnOver, legalNetIncomeRange, legalNumberOfEmployeeRange, effectiveBeneficiary, kycLevel, kycReview, kycReviewComment, isFreezed, isFrozen, language, optInMailing, sepaCreditorIdentifier, taxNumber, taxResidence, position, personalAssets, activityOutsideEu, economicSanctions, residentCountriesSanctions, involvedSanctions, entitySanctionsQuestionnaire, sanctionsQuestionnaireDate, timezone, occupationType, sourceOfFunds, legalSectorType, isOnStockExchange, codeStatus, informationStatus, createdDate, modifiedDate, walletCount, payinCount, totalRows, hashCodeNullable(occupationCategory), hashCodeNullable(personalAssetsRange), hashCodeNullable(monthlyIncomeRange), hashCodeNullable(birthCityCode));
+    return Objects.hash(userId, userStatus, userTag, parentUserId, parentType, controllingPersonType, employeeType, specifiedUSPerson, title, firstname, lastname, middleNames, birthday, email, address1, address2, address3, postcode, city, state, country, countryName, distributionCountry, secondaryAddress1, secondaryAddress2, secondaryAddress3, secondaryPostcode, secondaryCity, secondaryState, secondaryCountry, clientId, phone, mobile, nationality, nationalityOther, placeOfBirth, birthCountry, occupation, incomeRange, legalName, legalNameEmbossed, legalRegistrationNumber, legalTvaNumber, legalRegistrationDate, legalForm, legalShareCapital, legalSector, legalAnnualTurnOver, legalNetIncomeRange, legalNumberOfEmployeeRange, effectiveBeneficiary, kycLevel, kycReview, kycReviewComment, isFreezed, isFrozen, language, optInMailing, sepaCreditorIdentifier, taxNumber, taxResidence, position, personalAssets, activityOutsideEu, economicSanctions, residentCountriesSanctions, involvedSanctions, entitySanctionsQuestionnaire, sanctionsQuestionnaireDate, timezone, occupationType, sourceOfFunds, legalSectorType, isOnStockExchange, codeStatus, informationStatus, createdDate, modifiedDate, walletCount, payinCount, totalRows, occupationCategory, personalAssetsRange, monthlyIncomeRange, hashCodeNullable(birthCityCode));
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3875,4 +3889,3 @@ public class UserObjectUsersInner {
   }
 
 }
-

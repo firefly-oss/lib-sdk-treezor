@@ -13,9 +13,12 @@
 
 package com.sdk.treezor;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.openapitools.jackson.nullable.JsonNullableModule;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
@@ -162,10 +165,20 @@ public class ApiClient extends JavaTimeFormatter {
         }
         ObjectMapper mapper = new ObjectMapper();
         mapper.setDateFormat(dateFormat);
-        mapper.registerModule(new JavaTimeModule());
+
+        // Register JavaTimeModule for handling Java 8 date/time types
+        JavaTimeModule javaTimeModule = new JavaTimeModule();
+
+        // Register custom deserializer for OffsetDateTime
+        javaTimeModule.addDeserializer(OffsetDateTime.class, new CustomOffsetDateTimeDeserializer());
+
+        mapper.registerModule(javaTimeModule);
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        JsonNullableModule jnm = new JsonNullableModule();
-        mapper.registerModule(jnm);
+
+        SimpleModule module = new SimpleModule();
+        module.addSerializer((Class<JsonNullable<?>>) (Class<?>) JsonNullable.class, new CustomJsonNullableSerializer());
+        mapper.registerModule(module);
+        mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
         return mapper;
     }
 
