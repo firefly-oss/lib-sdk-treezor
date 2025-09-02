@@ -29,6 +29,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 import java.util.NoSuchElementException;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import java.util.UUID;
 
 /**
  * GetOperations200ResponseDataInner
@@ -160,7 +161,7 @@ public class GetOperations200ResponseDataInner {
 
   public static final String JSON_PROPERTY_WALLET_ID = "walletId";
   @javax.annotation.Nullable
-  private Long walletId;
+  private UUID walletId;
 
   /**
    * Direction of operation credit or debit
@@ -203,7 +204,7 @@ public class GetOperations200ResponseDataInner {
 
   public static final String JSON_PROPERTY_OBJECT_ID = "objectId";
   @javax.annotation.Nullable
-  private Long objectId;
+  private UUID objectId;
 
   public static final String JSON_PROPERTY_LABEL = "label";
   @javax.annotation.Nullable
@@ -344,7 +345,7 @@ public class GetOperations200ResponseDataInner {
     this.status = status;
   }
 
-  public GetOperations200ResponseDataInner walletId(@javax.annotation.Nullable Long walletId) {
+  public GetOperations200ResponseDataInner walletId(@javax.annotation.Nullable UUID walletId) {
     
     this.walletId = walletId;
     return this;
@@ -358,14 +359,14 @@ public class GetOperations200ResponseDataInner {
   @JsonProperty(JSON_PROPERTY_WALLET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Long getWalletId() {
+  public UUID getWalletId() {
     return walletId;
   }
 
 
   @JsonProperty(JSON_PROPERTY_WALLET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setWalletId(@javax.annotation.Nullable Long walletId) {
+  public void setWalletId(@javax.annotation.Nullable UUID walletId) {
     this.walletId = walletId;
   }
 
@@ -394,7 +395,7 @@ public class GetOperations200ResponseDataInner {
     this.direction = direction;
   }
 
-  public GetOperations200ResponseDataInner objectId(@javax.annotation.Nullable Long objectId) {
+  public GetOperations200ResponseDataInner objectId(@javax.annotation.Nullable UUID objectId) {
     
     this.objectId = objectId;
     return this;
@@ -408,14 +409,14 @@ public class GetOperations200ResponseDataInner {
   @JsonProperty(JSON_PROPERTY_OBJECT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Long getObjectId() {
+  public UUID getObjectId() {
     return objectId;
   }
 
 
   @JsonProperty(JSON_PROPERTY_OBJECT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setObjectId(@javax.annotation.Nullable Long objectId) {
+  public void setObjectId(@javax.annotation.Nullable UUID objectId) {
     this.objectId = objectId;
   }
 

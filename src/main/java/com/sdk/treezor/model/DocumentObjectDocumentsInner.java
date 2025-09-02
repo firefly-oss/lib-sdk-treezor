@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import java.time.OffsetDateTime;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import java.util.UUID;
 
 /**
  * DocumentObjectDocumentsInner
@@ -214,7 +215,7 @@ public class DocumentObjectDocumentsInner {
 
   public static final String JSON_PROPERTY_RESIDENCE_ID = "residenceId";
   @javax.annotation.Nullable
-  private Long residenceId;
+  private UUID residenceId;
 
   public static final String JSON_PROPERTY_TEMPORARY_URL = "temporaryUrl";
   @javax.annotation.Nullable
@@ -608,7 +609,7 @@ public class DocumentObjectDocumentsInner {
     this.informationStatus = informationStatus;
   }
 
-  public DocumentObjectDocumentsInner residenceId(@javax.annotation.Nullable Long residenceId) {
+  public DocumentObjectDocumentsInner residenceId(@javax.annotation.Nullable UUID residenceId) {
     
     this.residenceId = residenceId;
     return this;
@@ -622,14 +623,14 @@ public class DocumentObjectDocumentsInner {
   @JsonProperty(JSON_PROPERTY_RESIDENCE_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Long getResidenceId() {
+  public UUID getResidenceId() {
     return residenceId;
   }
 
 
   @JsonProperty(JSON_PROPERTY_RESIDENCE_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setResidenceId(@javax.annotation.Nullable Long residenceId) {
+  public void setResidenceId(@javax.annotation.Nullable UUID residenceId) {
     this.residenceId = residenceId;
   }
 

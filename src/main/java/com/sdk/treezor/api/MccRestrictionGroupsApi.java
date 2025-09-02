@@ -31,6 +31,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
+import java.util.UUID;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class MccRestrictionGroupsApi {
@@ -65,7 +66,7 @@ public class MccRestrictionGroupsApi {
      * @return DeleteMccRestrictionGroups200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec deleteMccRestrictionGroupsRequestCreation(Long id, List<String> fields) throws WebClientResponseException {
+    private ResponseSpec deleteMccRestrictionGroupsRequestCreation(UUID id, List<String> fields) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -107,7 +108,7 @@ public class MccRestrictionGroupsApi {
      * @return DeleteMccRestrictionGroups200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<DeleteMccRestrictionGroups200Response> deleteMccRestrictionGroups(Long id, List<String> fields) throws WebClientResponseException {
+    public Mono<DeleteMccRestrictionGroups200Response> deleteMccRestrictionGroups(UUID id, List<String> fields) throws WebClientResponseException {
         ParameterizedTypeReference<DeleteMccRestrictionGroups200Response> localVarReturnType = new ParameterizedTypeReference<DeleteMccRestrictionGroups200Response>() {};
         return deleteMccRestrictionGroupsRequestCreation(id, fields).bodyToMono(localVarReturnType);
     }
@@ -123,7 +124,7 @@ public class MccRestrictionGroupsApi {
      * @return ResponseEntity&lt;DeleteMccRestrictionGroups200Response&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<DeleteMccRestrictionGroups200Response>> deleteMccRestrictionGroupsWithHttpInfo(Long id, List<String> fields) throws WebClientResponseException {
+    public Mono<ResponseEntity<DeleteMccRestrictionGroups200Response>> deleteMccRestrictionGroupsWithHttpInfo(UUID id, List<String> fields) throws WebClientResponseException {
         ParameterizedTypeReference<DeleteMccRestrictionGroups200Response> localVarReturnType = new ParameterizedTypeReference<DeleteMccRestrictionGroups200Response>() {};
         return deleteMccRestrictionGroupsRequestCreation(id, fields).toEntity(localVarReturnType);
     }
@@ -139,7 +140,7 @@ public class MccRestrictionGroupsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec deleteMccRestrictionGroupsWithResponseSpec(Long id, List<String> fields) throws WebClientResponseException {
+    public ResponseSpec deleteMccRestrictionGroupsWithResponseSpec(UUID id, List<String> fields) throws WebClientResponseException {
         return deleteMccRestrictionGroupsRequestCreation(id, fields);
     }
 
@@ -263,7 +264,7 @@ public class MccRestrictionGroupsApi {
      * @return GetMccRestrictionGroupsId200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec getMccRestrictionGroupsIdRequestCreation(Long id, List<String> fields) throws WebClientResponseException {
+    private ResponseSpec getMccRestrictionGroupsIdRequestCreation(UUID id, List<String> fields) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -305,7 +306,7 @@ public class MccRestrictionGroupsApi {
      * @return GetMccRestrictionGroupsId200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<GetMccRestrictionGroupsId200Response> getMccRestrictionGroupsId(Long id, List<String> fields) throws WebClientResponseException {
+    public Mono<GetMccRestrictionGroupsId200Response> getMccRestrictionGroupsId(UUID id, List<String> fields) throws WebClientResponseException {
         ParameterizedTypeReference<GetMccRestrictionGroupsId200Response> localVarReturnType = new ParameterizedTypeReference<GetMccRestrictionGroupsId200Response>() {};
         return getMccRestrictionGroupsIdRequestCreation(id, fields).bodyToMono(localVarReturnType);
     }
@@ -321,7 +322,7 @@ public class MccRestrictionGroupsApi {
      * @return ResponseEntity&lt;GetMccRestrictionGroupsId200Response&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<GetMccRestrictionGroupsId200Response>> getMccRestrictionGroupsIdWithHttpInfo(Long id, List<String> fields) throws WebClientResponseException {
+    public Mono<ResponseEntity<GetMccRestrictionGroupsId200Response>> getMccRestrictionGroupsIdWithHttpInfo(UUID id, List<String> fields) throws WebClientResponseException {
         ParameterizedTypeReference<GetMccRestrictionGroupsId200Response> localVarReturnType = new ParameterizedTypeReference<GetMccRestrictionGroupsId200Response>() {};
         return getMccRestrictionGroupsIdRequestCreation(id, fields).toEntity(localVarReturnType);
     }
@@ -337,7 +338,7 @@ public class MccRestrictionGroupsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec getMccRestrictionGroupsIdWithResponseSpec(Long id, List<String> fields) throws WebClientResponseException {
+    public ResponseSpec getMccRestrictionGroupsIdWithResponseSpec(UUID id, List<String> fields) throws WebClientResponseException {
         return getMccRestrictionGroupsIdRequestCreation(id, fields);
     }
 

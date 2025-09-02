@@ -30,6 +30,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.UUID;
 
 /**
  * API tests for MccRestrictionGroupsApi
@@ -48,7 +49,7 @@ public class MccRestrictionGroupsApiTest {
     @Test
     public void deleteMccRestrictionGroupsTest()  {
         // uncomment below to test the function
-        //Long id = null;
+        //UUID id = null;
         //List<String> fields = null;
         //DeleteMccRestrictionGroups200Response response = api.deleteMccRestrictionGroups(id, fields).block();
 
@@ -83,7 +84,7 @@ public class MccRestrictionGroupsApiTest {
     @Test
     public void getMccRestrictionGroupsIdTest()  {
         // uncomment below to test the function
-        //Long id = null;
+        //UUID id = null;
         //List<String> fields = null;
         //GetMccRestrictionGroupsId200Response response = api.getMccRestrictionGroupsId(id, fields).block();
 

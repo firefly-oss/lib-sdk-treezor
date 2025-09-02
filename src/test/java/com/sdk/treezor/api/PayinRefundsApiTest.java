@@ -26,6 +26,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.UUID;
 
 /**
  * API tests for PayinRefundsApi
@@ -44,7 +45,7 @@ public class PayinRefundsApiTest {
     @Test
     public void getPayinrefundTest()  {
         // uncomment below to test the function
-        //Long id = null;
+        //UUID id = null;
         //GetPayinrefund200Response response = api.getPayinrefund(id).block();
 
         // TODO: test validations

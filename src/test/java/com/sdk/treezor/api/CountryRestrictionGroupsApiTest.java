@@ -28,6 +28,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.UUID;
 
 /**
  * API tests for CountryRestrictionGroupsApi
@@ -46,7 +47,7 @@ public class CountryRestrictionGroupsApiTest {
     @Test
     public void deleteCountryRestrictionGroupsTest()  {
         // uncomment below to test the function
-        //Long id = null;
+        //UUID id = null;
         //List<String> fields = null;
         //PostCountryRestrictionGroup200Response response = api.deleteCountryRestrictionGroups(id, fields).block();
 
@@ -81,7 +82,7 @@ public class CountryRestrictionGroupsApiTest {
     @Test
     public void getCountryRestrictionGroupsIdTest()  {
         // uncomment below to test the function
-        //Long id = null;
+        //UUID id = null;
         //List<String> fields = null;
         //PostCountryRestrictionGroup200Response response = api.getCountryRestrictionGroupsId(id, fields).block();
 

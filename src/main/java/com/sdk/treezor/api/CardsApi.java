@@ -42,6 +42,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
+import java.util.UUID;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class CardsApi {
@@ -628,7 +629,7 @@ public class CardsApi {
      * @return CardObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec getCardRequestCreation(Long cardId) throws WebClientResponseException {
+    private ResponseSpec getCardRequestCreation(UUID cardId) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'cardId' is set
         if (cardId == null) {
@@ -668,7 +669,7 @@ public class CardsApi {
      * @return CardObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<CardObject> getCard(Long cardId) throws WebClientResponseException {
+    public Mono<CardObject> getCard(UUID cardId) throws WebClientResponseException {
         ParameterizedTypeReference<CardObject> localVarReturnType = new ParameterizedTypeReference<CardObject>() {};
         return getCardRequestCreation(cardId).bodyToMono(localVarReturnType);
     }
@@ -684,7 +685,7 @@ public class CardsApi {
      * @return ResponseEntity&lt;CardObject&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<CardObject>> getCardWithHttpInfo(Long cardId) throws WebClientResponseException {
+    public Mono<ResponseEntity<CardObject>> getCardWithHttpInfo(UUID cardId) throws WebClientResponseException {
         ParameterizedTypeReference<CardObject> localVarReturnType = new ParameterizedTypeReference<CardObject>() {};
         return getCardRequestCreation(cardId).toEntity(localVarReturnType);
     }
@@ -700,7 +701,7 @@ public class CardsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec getCardWithResponseSpec(Long cardId) throws WebClientResponseException {
+    public ResponseSpec getCardWithResponseSpec(UUID cardId) throws WebClientResponseException {
         return getCardRequestCreation(cardId);
     }
 

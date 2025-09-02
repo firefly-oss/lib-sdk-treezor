@@ -33,6 +33,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
+import java.util.UUID;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class RecallsApi {
@@ -392,7 +393,7 @@ public class RecallsApi {
      * @return GetRecallRs200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec putRecallRRequestCreation(Long recallId, PutRecallRRequest putRecallRRequest) throws WebClientResponseException {
+    private ResponseSpec putRecallRRequestCreation(UUID recallId, PutRecallRRequest putRecallRRequest) throws WebClientResponseException {
         Object postBody = putRecallRRequest;
         // verify the required parameter 'recallId' is set
         if (recallId == null) {
@@ -434,7 +435,7 @@ public class RecallsApi {
      * @return GetRecallRs200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<GetRecallRs200Response> putRecallR(Long recallId, PutRecallRRequest putRecallRRequest) throws WebClientResponseException {
+    public Mono<GetRecallRs200Response> putRecallR(UUID recallId, PutRecallRRequest putRecallRRequest) throws WebClientResponseException {
         ParameterizedTypeReference<GetRecallRs200Response> localVarReturnType = new ParameterizedTypeReference<GetRecallRs200Response>() {};
         return putRecallRRequestCreation(recallId, putRecallRRequest).bodyToMono(localVarReturnType);
     }
@@ -450,7 +451,7 @@ public class RecallsApi {
      * @return ResponseEntity&lt;GetRecallRs200Response&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<GetRecallRs200Response>> putRecallRWithHttpInfo(Long recallId, PutRecallRRequest putRecallRRequest) throws WebClientResponseException {
+    public Mono<ResponseEntity<GetRecallRs200Response>> putRecallRWithHttpInfo(UUID recallId, PutRecallRRequest putRecallRRequest) throws WebClientResponseException {
         ParameterizedTypeReference<GetRecallRs200Response> localVarReturnType = new ParameterizedTypeReference<GetRecallRs200Response>() {};
         return putRecallRRequestCreation(recallId, putRecallRRequest).toEntity(localVarReturnType);
     }
@@ -466,7 +467,7 @@ public class RecallsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec putRecallRWithResponseSpec(Long recallId, PutRecallRRequest putRecallRRequest) throws WebClientResponseException {
+    public ResponseSpec putRecallRWithResponseSpec(UUID recallId, PutRecallRRequest putRecallRRequest) throws WebClientResponseException {
         return putRecallRRequestCreation(recallId, putRecallRRequest);
     }
 

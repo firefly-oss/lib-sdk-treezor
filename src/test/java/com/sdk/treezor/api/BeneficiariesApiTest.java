@@ -26,6 +26,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.UUID;
 
 /**
  * API tests for BeneficiariesApi
@@ -65,7 +66,7 @@ public class BeneficiariesApiTest {
     @Test
     public void getBeneficiaryTest()  {
         // uncomment below to test the function
-        //Long beneficiaryId = null;
+        //UUID beneficiaryId = null;
         //List<String> fields = null;
         //BeneficiaryObject response = api.getBeneficiary(beneficiaryId, fields).block();
 

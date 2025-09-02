@@ -29,6 +29,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
+import java.util.UUID;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class MerchantIdRestrictionGroupsApi {
@@ -63,7 +64,7 @@ public class MerchantIdRestrictionGroupsApi {
      * @return MerchantIdGroupObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec deleteMerchantIdRestrictionGroupsRequestCreation(Long id, List<String> fields) throws WebClientResponseException {
+    private ResponseSpec deleteMerchantIdRestrictionGroupsRequestCreation(UUID id, List<String> fields) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -105,7 +106,7 @@ public class MerchantIdRestrictionGroupsApi {
      * @return MerchantIdGroupObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<MerchantIdGroupObject> deleteMerchantIdRestrictionGroups(Long id, List<String> fields) throws WebClientResponseException {
+    public Mono<MerchantIdGroupObject> deleteMerchantIdRestrictionGroups(UUID id, List<String> fields) throws WebClientResponseException {
         ParameterizedTypeReference<MerchantIdGroupObject> localVarReturnType = new ParameterizedTypeReference<MerchantIdGroupObject>() {};
         return deleteMerchantIdRestrictionGroupsRequestCreation(id, fields).bodyToMono(localVarReturnType);
     }
@@ -121,7 +122,7 @@ public class MerchantIdRestrictionGroupsApi {
      * @return ResponseEntity&lt;MerchantIdGroupObject&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<MerchantIdGroupObject>> deleteMerchantIdRestrictionGroupsWithHttpInfo(Long id, List<String> fields) throws WebClientResponseException {
+    public Mono<ResponseEntity<MerchantIdGroupObject>> deleteMerchantIdRestrictionGroupsWithHttpInfo(UUID id, List<String> fields) throws WebClientResponseException {
         ParameterizedTypeReference<MerchantIdGroupObject> localVarReturnType = new ParameterizedTypeReference<MerchantIdGroupObject>() {};
         return deleteMerchantIdRestrictionGroupsRequestCreation(id, fields).toEntity(localVarReturnType);
     }
@@ -137,7 +138,7 @@ public class MerchantIdRestrictionGroupsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec deleteMerchantIdRestrictionGroupsWithResponseSpec(Long id, List<String> fields) throws WebClientResponseException {
+    public ResponseSpec deleteMerchantIdRestrictionGroupsWithResponseSpec(UUID id, List<String> fields) throws WebClientResponseException {
         return deleteMerchantIdRestrictionGroupsRequestCreation(id, fields);
     }
 

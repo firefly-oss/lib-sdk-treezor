@@ -29,6 +29,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
+import java.util.UUID;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class CountryRestrictionGroupsApi {
@@ -63,7 +64,7 @@ public class CountryRestrictionGroupsApi {
      * @return PostCountryRestrictionGroup200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec deleteCountryRestrictionGroupsRequestCreation(Long id, List<String> fields) throws WebClientResponseException {
+    private ResponseSpec deleteCountryRestrictionGroupsRequestCreation(UUID id, List<String> fields) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -105,7 +106,7 @@ public class CountryRestrictionGroupsApi {
      * @return PostCountryRestrictionGroup200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<PostCountryRestrictionGroup200Response> deleteCountryRestrictionGroups(Long id, List<String> fields) throws WebClientResponseException {
+    public Mono<PostCountryRestrictionGroup200Response> deleteCountryRestrictionGroups(UUID id, List<String> fields) throws WebClientResponseException {
         ParameterizedTypeReference<PostCountryRestrictionGroup200Response> localVarReturnType = new ParameterizedTypeReference<PostCountryRestrictionGroup200Response>() {};
         return deleteCountryRestrictionGroupsRequestCreation(id, fields).bodyToMono(localVarReturnType);
     }
@@ -121,7 +122,7 @@ public class CountryRestrictionGroupsApi {
      * @return ResponseEntity&lt;PostCountryRestrictionGroup200Response&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<PostCountryRestrictionGroup200Response>> deleteCountryRestrictionGroupsWithHttpInfo(Long id, List<String> fields) throws WebClientResponseException {
+    public Mono<ResponseEntity<PostCountryRestrictionGroup200Response>> deleteCountryRestrictionGroupsWithHttpInfo(UUID id, List<String> fields) throws WebClientResponseException {
         ParameterizedTypeReference<PostCountryRestrictionGroup200Response> localVarReturnType = new ParameterizedTypeReference<PostCountryRestrictionGroup200Response>() {};
         return deleteCountryRestrictionGroupsRequestCreation(id, fields).toEntity(localVarReturnType);
     }
@@ -137,7 +138,7 @@ public class CountryRestrictionGroupsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec deleteCountryRestrictionGroupsWithResponseSpec(Long id, List<String> fields) throws WebClientResponseException {
+    public ResponseSpec deleteCountryRestrictionGroupsWithResponseSpec(UUID id, List<String> fields) throws WebClientResponseException {
         return deleteCountryRestrictionGroupsRequestCreation(id, fields);
     }
 
@@ -261,7 +262,7 @@ public class CountryRestrictionGroupsApi {
      * @return PostCountryRestrictionGroup200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec getCountryRestrictionGroupsIdRequestCreation(Long id, List<String> fields) throws WebClientResponseException {
+    private ResponseSpec getCountryRestrictionGroupsIdRequestCreation(UUID id, List<String> fields) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -303,7 +304,7 @@ public class CountryRestrictionGroupsApi {
      * @return PostCountryRestrictionGroup200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<PostCountryRestrictionGroup200Response> getCountryRestrictionGroupsId(Long id, List<String> fields) throws WebClientResponseException {
+    public Mono<PostCountryRestrictionGroup200Response> getCountryRestrictionGroupsId(UUID id, List<String> fields) throws WebClientResponseException {
         ParameterizedTypeReference<PostCountryRestrictionGroup200Response> localVarReturnType = new ParameterizedTypeReference<PostCountryRestrictionGroup200Response>() {};
         return getCountryRestrictionGroupsIdRequestCreation(id, fields).bodyToMono(localVarReturnType);
     }
@@ -319,7 +320,7 @@ public class CountryRestrictionGroupsApi {
      * @return ResponseEntity&lt;PostCountryRestrictionGroup200Response&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<PostCountryRestrictionGroup200Response>> getCountryRestrictionGroupsIdWithHttpInfo(Long id, List<String> fields) throws WebClientResponseException {
+    public Mono<ResponseEntity<PostCountryRestrictionGroup200Response>> getCountryRestrictionGroupsIdWithHttpInfo(UUID id, List<String> fields) throws WebClientResponseException {
         ParameterizedTypeReference<PostCountryRestrictionGroup200Response> localVarReturnType = new ParameterizedTypeReference<PostCountryRestrictionGroup200Response>() {};
         return getCountryRestrictionGroupsIdRequestCreation(id, fields).toEntity(localVarReturnType);
     }
@@ -335,7 +336,7 @@ public class CountryRestrictionGroupsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec getCountryRestrictionGroupsIdWithResponseSpec(Long id, List<String> fields) throws WebClientResponseException {
+    public ResponseSpec getCountryRestrictionGroupsIdWithResponseSpec(UUID id, List<String> fields) throws WebClientResponseException {
         return getCountryRestrictionGroupsIdRequestCreation(id, fields);
     }
 

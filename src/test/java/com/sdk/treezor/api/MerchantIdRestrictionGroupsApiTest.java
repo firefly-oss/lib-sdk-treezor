@@ -28,6 +28,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.UUID;
 
 /**
  * API tests for MerchantIdRestrictionGroupsApi
@@ -46,7 +47,7 @@ public class MerchantIdRestrictionGroupsApiTest {
     @Test
     public void deleteMerchantIdRestrictionGroupsTest()  {
         // uncomment below to test the function
-        //Long id = null;
+        //UUID id = null;
         //List<String> fields = null;
         //MerchantIdGroupObject response = api.deleteMerchantIdRestrictionGroups(id, fields).block();
 

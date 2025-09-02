@@ -27,6 +27,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
+import java.util.UUID;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class TransfersApi {
@@ -60,7 +61,7 @@ public class TransfersApi {
      * @return TransferObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec deleteTransferRequestCreation(Long transferId) throws WebClientResponseException {
+    private ResponseSpec deleteTransferRequestCreation(UUID transferId) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'transferId' is set
         if (transferId == null) {
@@ -99,7 +100,7 @@ public class TransfersApi {
      * @return TransferObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<TransferObject> deleteTransfer(Long transferId) throws WebClientResponseException {
+    public Mono<TransferObject> deleteTransfer(UUID transferId) throws WebClientResponseException {
         ParameterizedTypeReference<TransferObject> localVarReturnType = new ParameterizedTypeReference<TransferObject>() {};
         return deleteTransferRequestCreation(transferId).bodyToMono(localVarReturnType);
     }
@@ -114,7 +115,7 @@ public class TransfersApi {
      * @return ResponseEntity&lt;TransferObject&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<TransferObject>> deleteTransferWithHttpInfo(Long transferId) throws WebClientResponseException {
+    public Mono<ResponseEntity<TransferObject>> deleteTransferWithHttpInfo(UUID transferId) throws WebClientResponseException {
         ParameterizedTypeReference<TransferObject> localVarReturnType = new ParameterizedTypeReference<TransferObject>() {};
         return deleteTransferRequestCreation(transferId).toEntity(localVarReturnType);
     }
@@ -129,7 +130,7 @@ public class TransfersApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec deleteTransferWithResponseSpec(Long transferId) throws WebClientResponseException {
+    public ResponseSpec deleteTransferWithResponseSpec(UUID transferId) throws WebClientResponseException {
         return deleteTransferRequestCreation(transferId);
     }
 
@@ -143,7 +144,7 @@ public class TransfersApi {
      * @return TransferObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec getTransferRequestCreation(Long transferId) throws WebClientResponseException {
+    private ResponseSpec getTransferRequestCreation(UUID transferId) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'transferId' is set
         if (transferId == null) {
@@ -182,7 +183,7 @@ public class TransfersApi {
      * @return TransferObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<TransferObject> getTransfer(Long transferId) throws WebClientResponseException {
+    public Mono<TransferObject> getTransfer(UUID transferId) throws WebClientResponseException {
         ParameterizedTypeReference<TransferObject> localVarReturnType = new ParameterizedTypeReference<TransferObject>() {};
         return getTransferRequestCreation(transferId).bodyToMono(localVarReturnType);
     }
@@ -197,7 +198,7 @@ public class TransfersApi {
      * @return ResponseEntity&lt;TransferObject&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<TransferObject>> getTransferWithHttpInfo(Long transferId) throws WebClientResponseException {
+    public Mono<ResponseEntity<TransferObject>> getTransferWithHttpInfo(UUID transferId) throws WebClientResponseException {
         ParameterizedTypeReference<TransferObject> localVarReturnType = new ParameterizedTypeReference<TransferObject>() {};
         return getTransferRequestCreation(transferId).toEntity(localVarReturnType);
     }
@@ -212,7 +213,7 @@ public class TransfersApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec getTransferWithResponseSpec(Long transferId) throws WebClientResponseException {
+    public ResponseSpec getTransferWithResponseSpec(UUID transferId) throws WebClientResponseException {
         return getTransferRequestCreation(transferId);
     }
 

@@ -29,6 +29,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
+import java.util.UUID;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class WalletsApi {
@@ -152,7 +153,7 @@ public class WalletsApi {
      * @return WalletObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec getWalletRequestCreation(Long walletId, String accessTag) throws WebClientResponseException {
+    private ResponseSpec getWalletRequestCreation(UUID walletId, String accessTag) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'walletId' is set
         if (walletId == null) {
@@ -194,7 +195,7 @@ public class WalletsApi {
      * @return WalletObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<WalletObject> getWallet(Long walletId, String accessTag) throws WebClientResponseException {
+    public Mono<WalletObject> getWallet(UUID walletId, String accessTag) throws WebClientResponseException {
         ParameterizedTypeReference<WalletObject> localVarReturnType = new ParameterizedTypeReference<WalletObject>() {};
         return getWalletRequestCreation(walletId, accessTag).bodyToMono(localVarReturnType);
     }
@@ -210,7 +211,7 @@ public class WalletsApi {
      * @return ResponseEntity&lt;WalletObject&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<WalletObject>> getWalletWithHttpInfo(Long walletId, String accessTag) throws WebClientResponseException {
+    public Mono<ResponseEntity<WalletObject>> getWalletWithHttpInfo(UUID walletId, String accessTag) throws WebClientResponseException {
         ParameterizedTypeReference<WalletObject> localVarReturnType = new ParameterizedTypeReference<WalletObject>() {};
         return getWalletRequestCreation(walletId, accessTag).toEntity(localVarReturnType);
     }
@@ -226,7 +227,7 @@ public class WalletsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec getWalletWithResponseSpec(Long walletId, String accessTag) throws WebClientResponseException {
+    public ResponseSpec getWalletWithResponseSpec(UUID walletId, String accessTag) throws WebClientResponseException {
         return getWalletRequestCreation(walletId, accessTag);
     }
 
@@ -479,7 +480,7 @@ public class WalletsApi {
      * @return WalletObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec putWalletRequestCreation(Long walletId, PutWalletRequest putWalletRequest) throws WebClientResponseException {
+    private ResponseSpec putWalletRequestCreation(UUID walletId, PutWalletRequest putWalletRequest) throws WebClientResponseException {
         Object postBody = putWalletRequest;
         // verify the required parameter 'walletId' is set
         if (walletId == null) {
@@ -521,7 +522,7 @@ public class WalletsApi {
      * @return WalletObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<WalletObject> putWallet(Long walletId, PutWalletRequest putWalletRequest) throws WebClientResponseException {
+    public Mono<WalletObject> putWallet(UUID walletId, PutWalletRequest putWalletRequest) throws WebClientResponseException {
         ParameterizedTypeReference<WalletObject> localVarReturnType = new ParameterizedTypeReference<WalletObject>() {};
         return putWalletRequestCreation(walletId, putWalletRequest).bodyToMono(localVarReturnType);
     }
@@ -537,7 +538,7 @@ public class WalletsApi {
      * @return ResponseEntity&lt;WalletObject&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<WalletObject>> putWalletWithHttpInfo(Long walletId, PutWalletRequest putWalletRequest) throws WebClientResponseException {
+    public Mono<ResponseEntity<WalletObject>> putWalletWithHttpInfo(UUID walletId, PutWalletRequest putWalletRequest) throws WebClientResponseException {
         ParameterizedTypeReference<WalletObject> localVarReturnType = new ParameterizedTypeReference<WalletObject>() {};
         return putWalletRequestCreation(walletId, putWalletRequest).toEntity(localVarReturnType);
     }
@@ -553,7 +554,7 @@ public class WalletsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec putWalletWithResponseSpec(Long walletId, PutWalletRequest putWalletRequest) throws WebClientResponseException {
+    public ResponseSpec putWalletWithResponseSpec(UUID walletId, PutWalletRequest putWalletRequest) throws WebClientResponseException {
         return putWalletRequestCreation(walletId, putWalletRequest);
     }
 }

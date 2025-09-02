@@ -31,6 +31,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.UUID;
 
 /**
  * API tests for PayoutsApi
@@ -49,7 +50,7 @@ public class PayoutsApiTest {
     @Test
     public void deletePayoutTest()  {
         // uncomment below to test the function
-        //Long payoutId = null;
+        //UUID payoutId = null;
         //DeletePayout200Response response = api.deletePayout(payoutId).block();
 
         // TODO: test validations
@@ -63,7 +64,7 @@ public class PayoutsApiTest {
     @Test
     public void getPayoutTest()  {
         // uncomment below to test the function
-        //Long payoutId = null;
+        //UUID payoutId = null;
         //GetPayout200Response response = api.getPayout(payoutId).block();
 
         // TODO: test validations

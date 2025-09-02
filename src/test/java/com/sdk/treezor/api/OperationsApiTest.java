@@ -27,6 +27,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.UUID;
 
 /**
  * API tests for OperationsApi
@@ -45,8 +46,8 @@ public class OperationsApiTest {
     @Test
     public void getOperationsTest()  {
         // uncomment below to test the function
-        //Long cardId = null;
-        //Long walletId = null;
+        //UUID cardId = null;
+        //UUID walletId = null;
         //String dateFrom = null;
         //String dateTo = null;
         //Long pageSize = null;

@@ -26,6 +26,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
+import java.util.UUID;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class MandatesApi {
@@ -152,7 +153,7 @@ public class MandatesApi {
      * @return MandateObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec getMandateRequestCreation(Long mandateId) throws WebClientResponseException {
+    private ResponseSpec getMandateRequestCreation(UUID mandateId) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'mandateId' is set
         if (mandateId == null) {
@@ -191,7 +192,7 @@ public class MandatesApi {
      * @return MandateObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<MandateObject> getMandate(Long mandateId) throws WebClientResponseException {
+    public Mono<MandateObject> getMandate(UUID mandateId) throws WebClientResponseException {
         ParameterizedTypeReference<MandateObject> localVarReturnType = new ParameterizedTypeReference<MandateObject>() {};
         return getMandateRequestCreation(mandateId).bodyToMono(localVarReturnType);
     }
@@ -206,7 +207,7 @@ public class MandatesApi {
      * @return ResponseEntity&lt;MandateObject&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<MandateObject>> getMandateWithHttpInfo(Long mandateId) throws WebClientResponseException {
+    public Mono<ResponseEntity<MandateObject>> getMandateWithHttpInfo(UUID mandateId) throws WebClientResponseException {
         ParameterizedTypeReference<MandateObject> localVarReturnType = new ParameterizedTypeReference<MandateObject>() {};
         return getMandateRequestCreation(mandateId).toEntity(localVarReturnType);
     }
@@ -221,7 +222,7 @@ public class MandatesApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec getMandateWithResponseSpec(Long mandateId) throws WebClientResponseException {
+    public ResponseSpec getMandateWithResponseSpec(UUID mandateId) throws WebClientResponseException {
         return getMandateRequestCreation(mandateId);
     }
 

@@ -32,6 +32,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
+import java.util.UUID;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class PayoutsApi {
@@ -65,7 +66,7 @@ public class PayoutsApi {
      * @return DeletePayout200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec deletePayoutRequestCreation(Long payoutId) throws WebClientResponseException {
+    private ResponseSpec deletePayoutRequestCreation(UUID payoutId) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'payoutId' is set
         if (payoutId == null) {
@@ -104,7 +105,7 @@ public class PayoutsApi {
      * @return DeletePayout200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<DeletePayout200Response> deletePayout(Long payoutId) throws WebClientResponseException {
+    public Mono<DeletePayout200Response> deletePayout(UUID payoutId) throws WebClientResponseException {
         ParameterizedTypeReference<DeletePayout200Response> localVarReturnType = new ParameterizedTypeReference<DeletePayout200Response>() {};
         return deletePayoutRequestCreation(payoutId).bodyToMono(localVarReturnType);
     }
@@ -119,7 +120,7 @@ public class PayoutsApi {
      * @return ResponseEntity&lt;DeletePayout200Response&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<DeletePayout200Response>> deletePayoutWithHttpInfo(Long payoutId) throws WebClientResponseException {
+    public Mono<ResponseEntity<DeletePayout200Response>> deletePayoutWithHttpInfo(UUID payoutId) throws WebClientResponseException {
         ParameterizedTypeReference<DeletePayout200Response> localVarReturnType = new ParameterizedTypeReference<DeletePayout200Response>() {};
         return deletePayoutRequestCreation(payoutId).toEntity(localVarReturnType);
     }
@@ -134,7 +135,7 @@ public class PayoutsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec deletePayoutWithResponseSpec(Long payoutId) throws WebClientResponseException {
+    public ResponseSpec deletePayoutWithResponseSpec(UUID payoutId) throws WebClientResponseException {
         return deletePayoutRequestCreation(payoutId);
     }
 
@@ -148,7 +149,7 @@ public class PayoutsApi {
      * @return GetPayout200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec getPayoutRequestCreation(Long payoutId) throws WebClientResponseException {
+    private ResponseSpec getPayoutRequestCreation(UUID payoutId) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'payoutId' is set
         if (payoutId == null) {
@@ -187,7 +188,7 @@ public class PayoutsApi {
      * @return GetPayout200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<GetPayout200Response> getPayout(Long payoutId) throws WebClientResponseException {
+    public Mono<GetPayout200Response> getPayout(UUID payoutId) throws WebClientResponseException {
         ParameterizedTypeReference<GetPayout200Response> localVarReturnType = new ParameterizedTypeReference<GetPayout200Response>() {};
         return getPayoutRequestCreation(payoutId).bodyToMono(localVarReturnType);
     }
@@ -202,7 +203,7 @@ public class PayoutsApi {
      * @return ResponseEntity&lt;GetPayout200Response&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<GetPayout200Response>> getPayoutWithHttpInfo(Long payoutId) throws WebClientResponseException {
+    public Mono<ResponseEntity<GetPayout200Response>> getPayoutWithHttpInfo(UUID payoutId) throws WebClientResponseException {
         ParameterizedTypeReference<GetPayout200Response> localVarReturnType = new ParameterizedTypeReference<GetPayout200Response>() {};
         return getPayoutRequestCreation(payoutId).toEntity(localVarReturnType);
     }
@@ -217,7 +218,7 @@ public class PayoutsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec getPayoutWithResponseSpec(Long payoutId) throws WebClientResponseException {
+    public ResponseSpec getPayoutWithResponseSpec(UUID payoutId) throws WebClientResponseException {
         return getPayoutRequestCreation(payoutId);
     }
 

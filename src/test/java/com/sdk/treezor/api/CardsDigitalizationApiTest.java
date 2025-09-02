@@ -25,6 +25,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.UUID;
 
 /**
  * API tests for CardsDigitalizationApi
@@ -43,7 +44,7 @@ public class CardsDigitalizationApiTest {
     @Test
     public void cardDigitalizationsIdTest()  {
         // uncomment below to test the function
-        //Long id = null;
+        //UUID id = null;
         //CardDigitalizationsId200Response response = api.cardDigitalizationsId(id).block();
 
         // TODO: test validations
@@ -57,7 +58,7 @@ public class CardsDigitalizationApiTest {
     @Test
     public void deletecardDigitalizationsIdTest()  {
         // uncomment below to test the function
-        //Long id = null;
+        //UUID id = null;
         //String reasonCode = null;
         //ReadcardDigitalizations200Response response = api.deletecardDigitalizationsId(id, reasonCode).block();
 
@@ -72,7 +73,7 @@ public class CardsDigitalizationApiTest {
     @Test
     public void putcardDigitalizationsIdTest()  {
         // uncomment below to test the function
-        //Long id = null;
+        //UUID id = null;
         //String status = null;
         //String reasonCode = null;
         //CardDigitalizationsId200Response response = api.putcardDigitalizationsId(id, status, reasonCode).block();

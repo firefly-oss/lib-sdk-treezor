@@ -28,6 +28,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
+import java.util.UUID;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class OperationsApi {
@@ -72,7 +73,7 @@ public class OperationsApi {
      * @return GetOperations200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec getOperationsRequestCreation(Long cardId, Long walletId, String dateFrom, String dateTo, Long pageSize, String operationType, String cursor, List<String> initialFlow, String direction, Integer amountFrom, String amountTo, List<String> status) throws WebClientResponseException {
+    private ResponseSpec getOperationsRequestCreation(UUID cardId, UUID walletId, String dateFrom, String dateTo, Long pageSize, String operationType, String cursor, List<String> initialFlow, String direction, Integer amountFrom, String amountTo, List<String> status) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'cardId' is set
         if (cardId == null) {
@@ -145,7 +146,7 @@ public class OperationsApi {
      * @return GetOperations200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<GetOperations200Response> getOperations(Long cardId, Long walletId, String dateFrom, String dateTo, Long pageSize, String operationType, String cursor, List<String> initialFlow, String direction, Integer amountFrom, String amountTo, List<String> status) throws WebClientResponseException {
+    public Mono<GetOperations200Response> getOperations(UUID cardId, UUID walletId, String dateFrom, String dateTo, Long pageSize, String operationType, String cursor, List<String> initialFlow, String direction, Integer amountFrom, String amountTo, List<String> status) throws WebClientResponseException {
         ParameterizedTypeReference<GetOperations200Response> localVarReturnType = new ParameterizedTypeReference<GetOperations200Response>() {};
         return getOperationsRequestCreation(cardId, walletId, dateFrom, dateTo, pageSize, operationType, cursor, initialFlow, direction, amountFrom, amountTo, status).bodyToMono(localVarReturnType);
     }
@@ -171,7 +172,7 @@ public class OperationsApi {
      * @return ResponseEntity&lt;GetOperations200Response&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<GetOperations200Response>> getOperationsWithHttpInfo(Long cardId, Long walletId, String dateFrom, String dateTo, Long pageSize, String operationType, String cursor, List<String> initialFlow, String direction, Integer amountFrom, String amountTo, List<String> status) throws WebClientResponseException {
+    public Mono<ResponseEntity<GetOperations200Response>> getOperationsWithHttpInfo(UUID cardId, UUID walletId, String dateFrom, String dateTo, Long pageSize, String operationType, String cursor, List<String> initialFlow, String direction, Integer amountFrom, String amountTo, List<String> status) throws WebClientResponseException {
         ParameterizedTypeReference<GetOperations200Response> localVarReturnType = new ParameterizedTypeReference<GetOperations200Response>() {};
         return getOperationsRequestCreation(cardId, walletId, dateFrom, dateTo, pageSize, operationType, cursor, initialFlow, direction, amountFrom, amountTo, status).toEntity(localVarReturnType);
     }
@@ -197,7 +198,7 @@ public class OperationsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec getOperationsWithResponseSpec(Long cardId, Long walletId, String dateFrom, String dateTo, Long pageSize, String operationType, String cursor, List<String> initialFlow, String direction, Integer amountFrom, String amountTo, List<String> status) throws WebClientResponseException {
+    public ResponseSpec getOperationsWithResponseSpec(UUID cardId, UUID walletId, String dateFrom, String dateTo, Long pageSize, String operationType, String cursor, List<String> initialFlow, String direction, Integer amountFrom, String amountTo, List<String> status) throws WebClientResponseException {
         return getOperationsRequestCreation(cardId, walletId, dateFrom, dateTo, pageSize, operationType, cursor, initialFlow, direction, amountFrom, amountTo, status);
     }
 

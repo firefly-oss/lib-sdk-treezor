@@ -26,6 +26,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
+import java.util.UUID;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class CardsDigitalizationApi {
@@ -61,7 +62,7 @@ public class CardsDigitalizationApi {
      * @deprecated
      */
     @Deprecated
-    private ResponseSpec cardDigitalizationsIdRequestCreation(Long id) throws WebClientResponseException {
+    private ResponseSpec cardDigitalizationsIdRequestCreation(UUID id) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -100,7 +101,7 @@ public class CardsDigitalizationApi {
      * @return CardDigitalizationsId200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<CardDigitalizationsId200Response> cardDigitalizationsId(Long id) throws WebClientResponseException {
+    public Mono<CardDigitalizationsId200Response> cardDigitalizationsId(UUID id) throws WebClientResponseException {
         ParameterizedTypeReference<CardDigitalizationsId200Response> localVarReturnType = new ParameterizedTypeReference<CardDigitalizationsId200Response>() {};
         return cardDigitalizationsIdRequestCreation(id).bodyToMono(localVarReturnType);
     }
@@ -115,7 +116,7 @@ public class CardsDigitalizationApi {
      * @return ResponseEntity&lt;CardDigitalizationsId200Response&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<CardDigitalizationsId200Response>> cardDigitalizationsIdWithHttpInfo(Long id) throws WebClientResponseException {
+    public Mono<ResponseEntity<CardDigitalizationsId200Response>> cardDigitalizationsIdWithHttpInfo(UUID id) throws WebClientResponseException {
         ParameterizedTypeReference<CardDigitalizationsId200Response> localVarReturnType = new ParameterizedTypeReference<CardDigitalizationsId200Response>() {};
         return cardDigitalizationsIdRequestCreation(id).toEntity(localVarReturnType);
     }
@@ -130,7 +131,7 @@ public class CardsDigitalizationApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec cardDigitalizationsIdWithResponseSpec(Long id) throws WebClientResponseException {
+    public ResponseSpec cardDigitalizationsIdWithResponseSpec(UUID id) throws WebClientResponseException {
         return cardDigitalizationsIdRequestCreation(id);
     }
 
@@ -147,7 +148,7 @@ public class CardsDigitalizationApi {
      * @deprecated
      */
     @Deprecated
-    private ResponseSpec deletecardDigitalizationsIdRequestCreation(Long id, String reasonCode) throws WebClientResponseException {
+    private ResponseSpec deletecardDigitalizationsIdRequestCreation(UUID id, String reasonCode) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -193,7 +194,7 @@ public class CardsDigitalizationApi {
      * @return ReadcardDigitalizations200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ReadcardDigitalizations200Response> deletecardDigitalizationsId(Long id, String reasonCode) throws WebClientResponseException {
+    public Mono<ReadcardDigitalizations200Response> deletecardDigitalizationsId(UUID id, String reasonCode) throws WebClientResponseException {
         ParameterizedTypeReference<ReadcardDigitalizations200Response> localVarReturnType = new ParameterizedTypeReference<ReadcardDigitalizations200Response>() {};
         return deletecardDigitalizationsIdRequestCreation(id, reasonCode).bodyToMono(localVarReturnType);
     }
@@ -209,7 +210,7 @@ public class CardsDigitalizationApi {
      * @return ResponseEntity&lt;ReadcardDigitalizations200Response&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<ReadcardDigitalizations200Response>> deletecardDigitalizationsIdWithHttpInfo(Long id, String reasonCode) throws WebClientResponseException {
+    public Mono<ResponseEntity<ReadcardDigitalizations200Response>> deletecardDigitalizationsIdWithHttpInfo(UUID id, String reasonCode) throws WebClientResponseException {
         ParameterizedTypeReference<ReadcardDigitalizations200Response> localVarReturnType = new ParameterizedTypeReference<ReadcardDigitalizations200Response>() {};
         return deletecardDigitalizationsIdRequestCreation(id, reasonCode).toEntity(localVarReturnType);
     }
@@ -225,7 +226,7 @@ public class CardsDigitalizationApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec deletecardDigitalizationsIdWithResponseSpec(Long id, String reasonCode) throws WebClientResponseException {
+    public ResponseSpec deletecardDigitalizationsIdWithResponseSpec(UUID id, String reasonCode) throws WebClientResponseException {
         return deletecardDigitalizationsIdRequestCreation(id, reasonCode);
     }
 
@@ -243,7 +244,7 @@ public class CardsDigitalizationApi {
      * @deprecated
      */
     @Deprecated
-    private ResponseSpec putcardDigitalizationsIdRequestCreation(Long id, String status, String reasonCode) throws WebClientResponseException {
+    private ResponseSpec putcardDigitalizationsIdRequestCreation(UUID id, String status, String reasonCode) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -295,7 +296,7 @@ public class CardsDigitalizationApi {
      * @return CardDigitalizationsId200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<CardDigitalizationsId200Response> putcardDigitalizationsId(Long id, String status, String reasonCode) throws WebClientResponseException {
+    public Mono<CardDigitalizationsId200Response> putcardDigitalizationsId(UUID id, String status, String reasonCode) throws WebClientResponseException {
         ParameterizedTypeReference<CardDigitalizationsId200Response> localVarReturnType = new ParameterizedTypeReference<CardDigitalizationsId200Response>() {};
         return putcardDigitalizationsIdRequestCreation(id, status, reasonCode).bodyToMono(localVarReturnType);
     }
@@ -312,7 +313,7 @@ public class CardsDigitalizationApi {
      * @return ResponseEntity&lt;CardDigitalizationsId200Response&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<CardDigitalizationsId200Response>> putcardDigitalizationsIdWithHttpInfo(Long id, String status, String reasonCode) throws WebClientResponseException {
+    public Mono<ResponseEntity<CardDigitalizationsId200Response>> putcardDigitalizationsIdWithHttpInfo(UUID id, String status, String reasonCode) throws WebClientResponseException {
         ParameterizedTypeReference<CardDigitalizationsId200Response> localVarReturnType = new ParameterizedTypeReference<CardDigitalizationsId200Response>() {};
         return putcardDigitalizationsIdRequestCreation(id, status, reasonCode).toEntity(localVarReturnType);
     }
@@ -329,7 +330,7 @@ public class CardsDigitalizationApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec putcardDigitalizationsIdWithResponseSpec(Long id, String status, String reasonCode) throws WebClientResponseException {
+    public ResponseSpec putcardDigitalizationsIdWithResponseSpec(UUID id, String status, String reasonCode) throws WebClientResponseException {
         return putcardDigitalizationsIdRequestCreation(id, status, reasonCode);
     }
 

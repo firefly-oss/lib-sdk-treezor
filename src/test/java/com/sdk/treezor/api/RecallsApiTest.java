@@ -32,6 +32,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.UUID;
 
 /**
  * API tests for RecallsApi
@@ -99,7 +100,7 @@ public class RecallsApiTest {
     @Test
     public void putRecallRTest()  {
         // uncomment below to test the function
-        //Long recallId = null;
+        //UUID recallId = null;
         //PutRecallRRequest putRecallRRequest = null;
         //GetRecallRs200Response response = api.putRecallR(recallId, putRecallRRequest).block();
 

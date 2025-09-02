@@ -27,6 +27,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.UUID;
 
 /**
  * API tests for CardTransactionsApi
@@ -45,7 +46,7 @@ public class CardTransactionsApiTest {
     @Test
     public void getCardtransactionTest()  {
         // uncomment below to test the function
-        //Long cardtransactionId = null;
+        //UUID cardtransactionId = null;
         //ReadCardTransaction200Response response = api.getCardtransaction(cardtransactionId).block();
 
         // TODO: test validations

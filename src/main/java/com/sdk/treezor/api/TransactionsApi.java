@@ -27,6 +27,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
+import java.util.UUID;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class TransactionsApi {
@@ -60,7 +61,7 @@ public class TransactionsApi {
      * @return TransactionObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec getTransactionRequestCreation(Long transactionId) throws WebClientResponseException {
+    private ResponseSpec getTransactionRequestCreation(UUID transactionId) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'transactionId' is set
         if (transactionId == null) {
@@ -99,7 +100,7 @@ public class TransactionsApi {
      * @return TransactionObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<TransactionObject> getTransaction(Long transactionId) throws WebClientResponseException {
+    public Mono<TransactionObject> getTransaction(UUID transactionId) throws WebClientResponseException {
         ParameterizedTypeReference<TransactionObject> localVarReturnType = new ParameterizedTypeReference<TransactionObject>() {};
         return getTransactionRequestCreation(transactionId).bodyToMono(localVarReturnType);
     }
@@ -114,7 +115,7 @@ public class TransactionsApi {
      * @return ResponseEntity&lt;TransactionObject&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<TransactionObject>> getTransactionWithHttpInfo(Long transactionId) throws WebClientResponseException {
+    public Mono<ResponseEntity<TransactionObject>> getTransactionWithHttpInfo(UUID transactionId) throws WebClientResponseException {
         ParameterizedTypeReference<TransactionObject> localVarReturnType = new ParameterizedTypeReference<TransactionObject>() {};
         return getTransactionRequestCreation(transactionId).toEntity(localVarReturnType);
     }
@@ -129,7 +130,7 @@ public class TransactionsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec getTransactionWithResponseSpec(Long transactionId) throws WebClientResponseException {
+    public ResponseSpec getTransactionWithResponseSpec(UUID transactionId) throws WebClientResponseException {
         return getTransactionRequestCreation(transactionId);
     }
 

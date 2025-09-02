@@ -29,6 +29,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
+import java.util.UUID;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class UserDocumentsApi {
@@ -141,7 +142,7 @@ public class UserDocumentsApi {
      * @return DocumentObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec deleteDocumentRequestCreation(Long documentId) throws WebClientResponseException {
+    private ResponseSpec deleteDocumentRequestCreation(UUID documentId) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'documentId' is set
         if (documentId == null) {
@@ -180,7 +181,7 @@ public class UserDocumentsApi {
      * @return DocumentObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<DocumentObject> deleteDocument(Long documentId) throws WebClientResponseException {
+    public Mono<DocumentObject> deleteDocument(UUID documentId) throws WebClientResponseException {
         ParameterizedTypeReference<DocumentObject> localVarReturnType = new ParameterizedTypeReference<DocumentObject>() {};
         return deleteDocumentRequestCreation(documentId).bodyToMono(localVarReturnType);
     }
@@ -195,7 +196,7 @@ public class UserDocumentsApi {
      * @return ResponseEntity&lt;DocumentObject&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<DocumentObject>> deleteDocumentWithHttpInfo(Long documentId) throws WebClientResponseException {
+    public Mono<ResponseEntity<DocumentObject>> deleteDocumentWithHttpInfo(UUID documentId) throws WebClientResponseException {
         ParameterizedTypeReference<DocumentObject> localVarReturnType = new ParameterizedTypeReference<DocumentObject>() {};
         return deleteDocumentRequestCreation(documentId).toEntity(localVarReturnType);
     }
@@ -210,7 +211,7 @@ public class UserDocumentsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec deleteDocumentWithResponseSpec(Long documentId) throws WebClientResponseException {
+    public ResponseSpec deleteDocumentWithResponseSpec(UUID documentId) throws WebClientResponseException {
         return deleteDocumentRequestCreation(documentId);
     }
 
@@ -224,7 +225,7 @@ public class UserDocumentsApi {
      * @return DocumentObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec getDocumentRequestCreation(Long documentId) throws WebClientResponseException {
+    private ResponseSpec getDocumentRequestCreation(UUID documentId) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'documentId' is set
         if (documentId == null) {
@@ -263,7 +264,7 @@ public class UserDocumentsApi {
      * @return DocumentObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<DocumentObject> getDocument(Long documentId) throws WebClientResponseException {
+    public Mono<DocumentObject> getDocument(UUID documentId) throws WebClientResponseException {
         ParameterizedTypeReference<DocumentObject> localVarReturnType = new ParameterizedTypeReference<DocumentObject>() {};
         return getDocumentRequestCreation(documentId).bodyToMono(localVarReturnType);
     }
@@ -278,7 +279,7 @@ public class UserDocumentsApi {
      * @return ResponseEntity&lt;DocumentObject&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<DocumentObject>> getDocumentWithHttpInfo(Long documentId) throws WebClientResponseException {
+    public Mono<ResponseEntity<DocumentObject>> getDocumentWithHttpInfo(UUID documentId) throws WebClientResponseException {
         ParameterizedTypeReference<DocumentObject> localVarReturnType = new ParameterizedTypeReference<DocumentObject>() {};
         return getDocumentRequestCreation(documentId).toEntity(localVarReturnType);
     }
@@ -293,7 +294,7 @@ public class UserDocumentsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec getDocumentWithResponseSpec(Long documentId) throws WebClientResponseException {
+    public ResponseSpec getDocumentWithResponseSpec(UUID documentId) throws WebClientResponseException {
         return getDocumentRequestCreation(documentId);
     }
 
@@ -307,7 +308,7 @@ public class UserDocumentsApi {
      * @return GetDocumentDownloadUrl200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec getDocumentDownloadUrlRequestCreation(Long documentId) throws WebClientResponseException {
+    private ResponseSpec getDocumentDownloadUrlRequestCreation(UUID documentId) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'documentId' is set
         if (documentId == null) {
@@ -346,7 +347,7 @@ public class UserDocumentsApi {
      * @return GetDocumentDownloadUrl200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<GetDocumentDownloadUrl200Response> getDocumentDownloadUrl(Long documentId) throws WebClientResponseException {
+    public Mono<GetDocumentDownloadUrl200Response> getDocumentDownloadUrl(UUID documentId) throws WebClientResponseException {
         ParameterizedTypeReference<GetDocumentDownloadUrl200Response> localVarReturnType = new ParameterizedTypeReference<GetDocumentDownloadUrl200Response>() {};
         return getDocumentDownloadUrlRequestCreation(documentId).bodyToMono(localVarReturnType);
     }
@@ -361,7 +362,7 @@ public class UserDocumentsApi {
      * @return ResponseEntity&lt;GetDocumentDownloadUrl200Response&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<GetDocumentDownloadUrl200Response>> getDocumentDownloadUrlWithHttpInfo(Long documentId) throws WebClientResponseException {
+    public Mono<ResponseEntity<GetDocumentDownloadUrl200Response>> getDocumentDownloadUrlWithHttpInfo(UUID documentId) throws WebClientResponseException {
         ParameterizedTypeReference<GetDocumentDownloadUrl200Response> localVarReturnType = new ParameterizedTypeReference<GetDocumentDownloadUrl200Response>() {};
         return getDocumentDownloadUrlRequestCreation(documentId).toEntity(localVarReturnType);
     }
@@ -376,7 +377,7 @@ public class UserDocumentsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec getDocumentDownloadUrlWithResponseSpec(Long documentId) throws WebClientResponseException {
+    public ResponseSpec getDocumentDownloadUrlWithResponseSpec(UUID documentId) throws WebClientResponseException {
         return getDocumentDownloadUrlRequestCreation(documentId);
     }
 
@@ -550,7 +551,7 @@ public class UserDocumentsApi {
      * @return DocumentObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec putDocumentRequestCreation(Long documentId, PutDocumentRequest putDocumentRequest) throws WebClientResponseException {
+    private ResponseSpec putDocumentRequestCreation(UUID documentId, PutDocumentRequest putDocumentRequest) throws WebClientResponseException {
         Object postBody = putDocumentRequest;
         // verify the required parameter 'documentId' is set
         if (documentId == null) {
@@ -592,7 +593,7 @@ public class UserDocumentsApi {
      * @return DocumentObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<DocumentObject> putDocument(Long documentId, PutDocumentRequest putDocumentRequest) throws WebClientResponseException {
+    public Mono<DocumentObject> putDocument(UUID documentId, PutDocumentRequest putDocumentRequest) throws WebClientResponseException {
         ParameterizedTypeReference<DocumentObject> localVarReturnType = new ParameterizedTypeReference<DocumentObject>() {};
         return putDocumentRequestCreation(documentId, putDocumentRequest).bodyToMono(localVarReturnType);
     }
@@ -608,7 +609,7 @@ public class UserDocumentsApi {
      * @return ResponseEntity&lt;DocumentObject&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<DocumentObject>> putDocumentWithHttpInfo(Long documentId, PutDocumentRequest putDocumentRequest) throws WebClientResponseException {
+    public Mono<ResponseEntity<DocumentObject>> putDocumentWithHttpInfo(UUID documentId, PutDocumentRequest putDocumentRequest) throws WebClientResponseException {
         ParameterizedTypeReference<DocumentObject> localVarReturnType = new ParameterizedTypeReference<DocumentObject>() {};
         return putDocumentRequestCreation(documentId, putDocumentRequest).toEntity(localVarReturnType);
     }
@@ -624,7 +625,7 @@ public class UserDocumentsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec putDocumentWithResponseSpec(Long documentId, PutDocumentRequest putDocumentRequest) throws WebClientResponseException {
+    public ResponseSpec putDocumentWithResponseSpec(UUID documentId, PutDocumentRequest putDocumentRequest) throws WebClientResponseException {
         return putDocumentRequestCreation(documentId, putDocumentRequest);
     }
 }

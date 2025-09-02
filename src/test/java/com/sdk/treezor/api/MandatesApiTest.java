@@ -25,6 +25,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.UUID;
 
 /**
  * API tests for MandatesApi
@@ -58,7 +59,7 @@ public class MandatesApiTest {
     @Test
     public void getMandateTest()  {
         // uncomment below to test the function
-        //Long mandateId = null;
+        //UUID mandateId = null;
         //MandateObject response = api.getMandate(mandateId).block();
 
         // TODO: test validations

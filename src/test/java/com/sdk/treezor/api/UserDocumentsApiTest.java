@@ -28,6 +28,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.UUID;
 
 /**
  * API tests for UserDocumentsApi
@@ -60,7 +61,7 @@ public class UserDocumentsApiTest {
     @Test
     public void deleteDocumentTest()  {
         // uncomment below to test the function
-        //Long documentId = null;
+        //UUID documentId = null;
         //DocumentObject response = api.deleteDocument(documentId).block();
 
         // TODO: test validations
@@ -74,7 +75,7 @@ public class UserDocumentsApiTest {
     @Test
     public void getDocumentTest()  {
         // uncomment below to test the function
-        //Long documentId = null;
+        //UUID documentId = null;
         //DocumentObject response = api.getDocument(documentId).block();
 
         // TODO: test validations
@@ -88,7 +89,7 @@ public class UserDocumentsApiTest {
     @Test
     public void getDocumentDownloadUrlTest()  {
         // uncomment below to test the function
-        //Long documentId = null;
+        //UUID documentId = null;
         //GetDocumentDownloadUrl200Response response = api.getDocumentDownloadUrl(documentId).block();
 
         // TODO: test validations
@@ -132,7 +133,7 @@ public class UserDocumentsApiTest {
     @Test
     public void putDocumentTest()  {
         // uncomment below to test the function
-        //Long documentId = null;
+        //UUID documentId = null;
         //PutDocumentRequest putDocumentRequest = null;
         //DocumentObject response = api.putDocument(documentId, putDocumentRequest).block();
 

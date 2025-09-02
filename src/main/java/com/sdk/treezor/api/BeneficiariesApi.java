@@ -27,6 +27,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
+import java.util.UUID;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class BeneficiariesApi {
@@ -175,7 +176,7 @@ public class BeneficiariesApi {
      * @return BeneficiaryObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec getBeneficiaryRequestCreation(Long beneficiaryId, List<String> fields) throws WebClientResponseException {
+    private ResponseSpec getBeneficiaryRequestCreation(UUID beneficiaryId, List<String> fields) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'beneficiaryId' is set
         if (beneficiaryId == null) {
@@ -217,7 +218,7 @@ public class BeneficiariesApi {
      * @return BeneficiaryObject
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<BeneficiaryObject> getBeneficiary(Long beneficiaryId, List<String> fields) throws WebClientResponseException {
+    public Mono<BeneficiaryObject> getBeneficiary(UUID beneficiaryId, List<String> fields) throws WebClientResponseException {
         ParameterizedTypeReference<BeneficiaryObject> localVarReturnType = new ParameterizedTypeReference<BeneficiaryObject>() {};
         return getBeneficiaryRequestCreation(beneficiaryId, fields).bodyToMono(localVarReturnType);
     }
@@ -233,7 +234,7 @@ public class BeneficiariesApi {
      * @return ResponseEntity&lt;BeneficiaryObject&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<BeneficiaryObject>> getBeneficiaryWithHttpInfo(Long beneficiaryId, List<String> fields) throws WebClientResponseException {
+    public Mono<ResponseEntity<BeneficiaryObject>> getBeneficiaryWithHttpInfo(UUID beneficiaryId, List<String> fields) throws WebClientResponseException {
         ParameterizedTypeReference<BeneficiaryObject> localVarReturnType = new ParameterizedTypeReference<BeneficiaryObject>() {};
         return getBeneficiaryRequestCreation(beneficiaryId, fields).toEntity(localVarReturnType);
     }
@@ -249,7 +250,7 @@ public class BeneficiariesApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec getBeneficiaryWithResponseSpec(Long beneficiaryId, List<String> fields) throws WebClientResponseException {
+    public ResponseSpec getBeneficiaryWithResponseSpec(UUID beneficiaryId, List<String> fields) throws WebClientResponseException {
         return getBeneficiaryRequestCreation(beneficiaryId, fields);
     }
 

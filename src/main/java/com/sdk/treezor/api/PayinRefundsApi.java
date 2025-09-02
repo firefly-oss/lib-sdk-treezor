@@ -27,6 +27,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
+import java.util.UUID;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class PayinRefundsApi {
@@ -60,7 +61,7 @@ public class PayinRefundsApi {
      * @return GetPayinrefund200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec getPayinrefundRequestCreation(Long id) throws WebClientResponseException {
+    private ResponseSpec getPayinrefundRequestCreation(UUID id) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'id' is set
         if (id == null) {
@@ -99,7 +100,7 @@ public class PayinRefundsApi {
      * @return GetPayinrefund200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<GetPayinrefund200Response> getPayinrefund(Long id) throws WebClientResponseException {
+    public Mono<GetPayinrefund200Response> getPayinrefund(UUID id) throws WebClientResponseException {
         ParameterizedTypeReference<GetPayinrefund200Response> localVarReturnType = new ParameterizedTypeReference<GetPayinrefund200Response>() {};
         return getPayinrefundRequestCreation(id).bodyToMono(localVarReturnType);
     }
@@ -114,7 +115,7 @@ public class PayinRefundsApi {
      * @return ResponseEntity&lt;GetPayinrefund200Response&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<GetPayinrefund200Response>> getPayinrefundWithHttpInfo(Long id) throws WebClientResponseException {
+    public Mono<ResponseEntity<GetPayinrefund200Response>> getPayinrefundWithHttpInfo(UUID id) throws WebClientResponseException {
         ParameterizedTypeReference<GetPayinrefund200Response> localVarReturnType = new ParameterizedTypeReference<GetPayinrefund200Response>() {};
         return getPayinrefundRequestCreation(id).toEntity(localVarReturnType);
     }
@@ -129,7 +130,7 @@ public class PayinRefundsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec getPayinrefundWithResponseSpec(Long id) throws WebClientResponseException {
+    public ResponseSpec getPayinrefundWithResponseSpec(UUID id) throws WebClientResponseException {
         return getPayinrefundRequestCreation(id);
     }
 

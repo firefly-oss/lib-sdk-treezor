@@ -28,6 +28,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
+import java.util.UUID;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-14T09:49:28.273669400+02:00[Europe/Paris]", comments = "Generator version: 7.12.0")
 public class CardTransactionsApi {
@@ -61,7 +62,7 @@ public class CardTransactionsApi {
      * @return ReadCardTransaction200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec getCardtransactionRequestCreation(Long cardtransactionId) throws WebClientResponseException {
+    private ResponseSpec getCardtransactionRequestCreation(UUID cardtransactionId) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'cardtransactionId' is set
         if (cardtransactionId == null) {
@@ -100,7 +101,7 @@ public class CardTransactionsApi {
      * @return ReadCardTransaction200Response
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ReadCardTransaction200Response> getCardtransaction(Long cardtransactionId) throws WebClientResponseException {
+    public Mono<ReadCardTransaction200Response> getCardtransaction(UUID cardtransactionId) throws WebClientResponseException {
         ParameterizedTypeReference<ReadCardTransaction200Response> localVarReturnType = new ParameterizedTypeReference<ReadCardTransaction200Response>() {};
         return getCardtransactionRequestCreation(cardtransactionId).bodyToMono(localVarReturnType);
     }
@@ -115,7 +116,7 @@ public class CardTransactionsApi {
      * @return ResponseEntity&lt;ReadCardTransaction200Response&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<ReadCardTransaction200Response>> getCardtransactionWithHttpInfo(Long cardtransactionId) throws WebClientResponseException {
+    public Mono<ResponseEntity<ReadCardTransaction200Response>> getCardtransactionWithHttpInfo(UUID cardtransactionId) throws WebClientResponseException {
         ParameterizedTypeReference<ReadCardTransaction200Response> localVarReturnType = new ParameterizedTypeReference<ReadCardTransaction200Response>() {};
         return getCardtransactionRequestCreation(cardtransactionId).toEntity(localVarReturnType);
     }
@@ -130,7 +131,7 @@ public class CardTransactionsApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec getCardtransactionWithResponseSpec(Long cardtransactionId) throws WebClientResponseException {
+    public ResponseSpec getCardtransactionWithResponseSpec(UUID cardtransactionId) throws WebClientResponseException {
         return getCardtransactionRequestCreation(cardtransactionId);
     }
 

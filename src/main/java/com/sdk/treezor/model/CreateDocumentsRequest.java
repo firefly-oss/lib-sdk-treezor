@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import java.util.UUID;
 
 /**
  * CreateDocumentsRequest
@@ -52,7 +53,7 @@ public class CreateDocumentsRequest {
 
   public static final String JSON_PROPERTY_RESIDENCE_ID = "residenceId";
   @javax.annotation.Nullable
-  private Long residenceId;
+  private UUID residenceId;
 
   public static final String JSON_PROPERTY_DOCUMENT_TYPE_ID = "documentTypeId";
   @javax.annotation.Nonnull
@@ -144,7 +145,7 @@ public class CreateDocumentsRequest {
     this.userId = userId;
   }
 
-  public CreateDocumentsRequest residenceId(@javax.annotation.Nullable Long residenceId) {
+  public CreateDocumentsRequest residenceId(@javax.annotation.Nullable UUID residenceId) {
     
     this.residenceId = residenceId;
     return this;
@@ -159,14 +160,14 @@ public class CreateDocumentsRequest {
   @JsonProperty(JSON_PROPERTY_RESIDENCE_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Long getResidenceId() {
+  public UUID getResidenceId() {
     return residenceId;
   }
 
 
   @JsonProperty(JSON_PROPERTY_RESIDENCE_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setResidenceId(@javax.annotation.Nullable Long residenceId) {
+  public void setResidenceId(@javax.annotation.Nullable UUID residenceId) {
     this.residenceId = residenceId;
   }
 

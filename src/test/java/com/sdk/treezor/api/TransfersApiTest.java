@@ -26,6 +26,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.UUID;
 
 /**
  * API tests for TransfersApi
@@ -44,7 +45,7 @@ public class TransfersApiTest {
     @Test
     public void deleteTransferTest()  {
         // uncomment below to test the function
-        //Long transferId = null;
+        //UUID transferId = null;
         //TransferObject response = api.deleteTransfer(transferId).block();
 
         // TODO: test validations
@@ -58,7 +59,7 @@ public class TransfersApiTest {
     @Test
     public void getTransferTest()  {
         // uncomment below to test the function
-        //Long transferId = null;
+        //UUID transferId = null;
         //TransferObject response = api.getTransfer(transferId).block();
 
         // TODO: test validations

@@ -28,6 +28,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.UUID;
 
 /**
  * API tests for WalletsApi
@@ -61,7 +62,7 @@ public class WalletsApiTest {
     @Test
     public void getWalletTest()  {
         // uncomment below to test the function
-        //Long walletId = null;
+        //UUID walletId = null;
         //String accessTag = null;
         //WalletObject response = api.getWallet(walletId, accessTag).block();
 
@@ -120,7 +121,7 @@ public class WalletsApiTest {
     @Test
     public void putWalletTest()  {
         // uncomment below to test the function
-        //Long walletId = null;
+        //UUID walletId = null;
         //PutWalletRequest putWalletRequest = null;
         //WalletObject response = api.putWallet(walletId, putWalletRequest).block();
 
